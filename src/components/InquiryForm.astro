@@ -1,0 +1,61 @@
+---
+const compact = Astro.props.compact ?? false;
+---
+
+<section class:list={["bg-transparent", compact ? "" : ""]}>
+  <div class="mb-[25px]">
+    <h2 class="mb-[18px] text-[22px] font-bold leading-none text-[var(--site-blue)]">Request an Offer</h2>
+    <p class="max-w-[430px] text-[13px] leading-[1.45] text-white/90 md:text-[#f5f5f5]">To get started, please fill out the contact form below. Our team will respond to your inquiry as soon as possible.</p>
+  </div>
+
+  <form class="grid gap-[11px]" data-inquiry-form>
+    <input name="name" placeholder="Name" class="h-[31px] w-full border-0 bg-white px-3 text-[12px] text-[#777] outline-none" />
+    <input name="email" type="email" placeholder="Email" class="h-[31px] w-full border-0 bg-white px-3 text-[12px] text-[#777] outline-none" />
+    <textarea name="message" placeholder="Message" rows="5" class="h-[83px] w-full resize-none border-0 bg-white px-3 py-2 text-[12px] text-[#777] outline-none"></textarea>
+    <button type="submit" class="h-[32px] bg-[var(--site-green)] text-[12px] font-bold text-white transition hover:bg-[#52bf60]">Send</button>
+    <p class="text-[10px] leading-[1.45] text-white/80">
+      We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
+    </p>
+
+    <p class="hidden bg-emerald-50 px-3 py-2 text-[12px] text-emerald-700" data-inquiry-success>
+      Inquiry captured locally. Wire `submitInquiry()` to your API when ready.
+    </p>
+    <p class="hidden bg-rose-50 px-3 py-2 text-[12px] text-rose-700" data-inquiry-error></p>
+  </form>
+</section>
+
+<script>
+  const forms = document.querySelectorAll("[data-inquiry-form]");
+  for (const form of forms) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const target = event.currentTarget;
+      if (!(target instanceof HTMLFormElement)) return;
+      const data = new FormData(target);
+      const name = String(data.get("name") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      const message = String(data.get("message") || "").trim();
+      const errorNode = target.querySelector("[data-inquiry-error]");
+      const successNode = target.querySelector("[data-inquiry-success]");
+      if (!(errorNode instanceof HTMLElement) || !(successNode instanceof HTMLElement)) return;
+
+      errorNode.classList.add("hidden");
+      successNode.classList.add("hidden");
+
+      if (!name || !email || !message) {
+        errorNode.textContent = "Name, email and message are required.";
+        errorNode.classList.remove("hidden");
+        return;
+      }
+
+      if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+        errorNode.textContent = "Please enter a valid email address.";
+        errorNode.classList.remove("hidden");
+        return;
+      }
+
+      successNode.classList.remove("hidden");
+      target.reset();
+    });
+  }
+</script>

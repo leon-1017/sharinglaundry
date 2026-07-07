@@ -1,0 +1,2008 @@
+{
+  "generatedAt": "2026-07-07T07:58:24.022Z",
+  "scope": {
+    "start": 0,
+    "limit": null,
+    "include": "25kgs-washer-extractor-and-25kgs-tumble-dryer|laundry-press-machine-was-installed|5-units-soft-mount|4-lanes-3300mm|hotel-laundry-equipment|50kg-washer-extractor-100kg-washer-extractor|100kg-washer-extractor-100kg-tumble-dryer|50kg-100kg-washer-extractor|50kg-washer-extractor-and-2500mm|shanghai-texcare-exhibition|two-20kg-coin-operated|3-rollers-3000mm-flatwork-ironers-deliveried-to-domestic-customer/$|3-rollers-3000mm-flatwork-ironers-deliveried-to-domestic-customer-2",
+    "force": false,
+    "filteredTotal": 14
+  },
+  "pages": {
+    "selected": 14,
+    "ok": 10,
+    "fetched": 9,
+    "reused": 1,
+    "failed": 4
+  },
+  "assets": {
+    "discovered": 208,
+    "downloaded": 208,
+    "failed": 0
+  },
+  "pageResults": [
+    {
+      "ok": false,
+      "url": "https://www.sharinglaundry.com/2019/04/30/25kgs-washer-extractor-and-25kgs-tumble-dryer-were-shipping-to-dubai-in-uae/",
+      "error": "page.goto: net::ERR_CONNECTION_RESET at https://www.sharinglaundry.com/2019/04/30/25kgs-washer-extractor-and-25kgs-tumble-dryer-were-shipping-to-dubai-in-uae/\nCall log:\n\u001b[2m  - navigating to \"https://www.sharinglaundry.com/2019/04/30/25kgs-washer-extractor-and-25kgs-tumble-dryer-were-shipping-to-dubai-in-uae/\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "ok": false,
+      "url": "https://www.sharinglaundry.com/2019/07/12/laundry-press-machine-was-installed-in-adu-dhabi/",
+      "error": "page.goto: net::ERR_CONNECTION_RESET at https://www.sharinglaundry.com/2019/07/12/laundry-press-machine-was-installed-in-adu-dhabi/\nCall log:\n\u001b[2m  - navigating to \"https://www.sharinglaundry.com/2019/07/12/laundry-press-machine-was-installed-in-adu-dhabi/\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "ok": false,
+      "url": "https://www.sharinglaundry.com/2019/08/20/5-units-soft-mount-washer-extractor-and-tumble-dryer-delivery-to-uae/",
+      "error": "page.goto: net::ERR_CONNECTION_RESET at https://www.sharinglaundry.com/2019/08/20/5-units-soft-mount-washer-extractor-and-tumble-dryer-delivery-to-uae/\nCall log:\n\u001b[2m  - navigating to \"https://www.sharinglaundry.com/2019/08/20/5-units-soft-mount-washer-extractor-and-tumble-dryer-delivery-to-uae/\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "ok": false,
+      "url": "https://www.sharinglaundry.com/2019/09/02/4-lanes-3300mm-bed-sheet-folder-with-stacker-shipped-to-uk-customer/",
+      "error": "page.goto: net::ERR_CONNECTION_RESET at https://www.sharinglaundry.com/2019/09/02/4-lanes-3300mm-bed-sheet-folder-with-stacker-shipped-to-uk-customer/\nCall log:\n\u001b[2m  - navigating to \"https://www.sharinglaundry.com/2019/09/02/4-lanes-3300mm-bed-sheet-folder-with-stacker-shipped-to-uk-customer/\", waiting until \"commit\"\u001b[22m\n"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2019/03/06/hotel-laundry-equipment-was-installed-in-cambodia-5-star-hotel/",
+      "title": "Hotel Laundry Equipment Was Installed In Cambodia 5 Star Hotel - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2019__03__06__hotel-laundry-equipment-was-installed-in-cambodia-5-star-hotel.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2019/11/02/50kg-washer-extractor-100kg-washer-extractor-100kg-tumble-dryer-double-rollers-3300mm-flatwork-ironer-and-dry-cleaning-machine-shipping-to-saudi-arabia/",
+      "title": "50Kg Washer Extractor, 100Kg Washer Extractor, 100Kg Tumble Dryer, Double Rollers 3300mm Flatwork Ironer And Dry Cleaning Machine Shipping To Saudi Arabia - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2019__11__02__50kg-washer-extractor-100kg-washer-extractor-100kg-tumble-dryer-double-rollers-3300mm-flatwork-ironer-and-dry-cleaning-machine-shipping-to-saudi-arabia.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2019/10/22/100kg-washer-extractor-100kg-tumble-dryer-and-folding-machine-shipped-to-uk-customer/",
+      "title": "100Kg Washer Extractor, 100Kg Tumble Dryer And Folding Machine Shipped To UK Customer - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2019__10__22__100kg-washer-extractor-100kg-tumble-dryer-and-folding-machine-shipped-to-uk-customer.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2020/04/27/50kg-100kg-washer-extractor-50kg-dryer-4-rollers-ironer-and-bedsheets-folder-were-shipped-to-switzerland/",
+      "title": "50Kg, 100Kg Washer Extractor, 50Kg Dryer, 4 Rollers Ironer and Bedsheets Folder were shipped to Switzerland - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2020__04__27__50kg-100kg-washer-extractor-50kg-dryer-4-rollers-ironer-and-bedsheets-folder-were-shipped-to-switzerland.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2020/01/17/50kg-washer-extractor-and-2500mm-gas-ironer-were-delivered-to-slovakia-hotel/",
+      "title": "50Kg Washer Extractor and 2500mm Gas Ironer were delivered to Slovakia hotel - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2020__01__17__50kg-washer-extractor-and-2500mm-gas-ironer-were-delivered-to-slovakia-hotel.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2020/10/18/we-joined-in-shanghai-texcare-exhibition-in-october/",
+      "title": "We joined in Shanghai Texcare exhibition in October - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2020__10__18__we-joined-in-shanghai-texcare-exhibition-in-october.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2020/06/18/two-20kg-coin-operated-washer-extractor-were-shipped-to-canada/",
+      "title": "Two 20Kg Coin Operated Washer Extractor were shipped to Canada - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2020__06__18__two-20kg-coin-operated-washer-extractor-were-shipped-to-canada.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2024/09/25/3-rollers-3000mm-flatwork-ironers-deliveried-to-domestic-customer/",
+      "title": "5*40HC containers’ Laundry Equipments deliveried to Saudi Arabia - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2024__09__25__3-rollers-3000mm-flatwork-ironers-deliveried-to-domestic-customer.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2025/03/15/3-rollers-3000mm-flatwork-ironers-deliveried-to-domestic-customer-2/",
+      "title": "3 Rollers 3000mm Flatwork Ironers deliveried to Domestic Customer - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 200,
+      "reused": false,
+      "attempts": 1,
+      "htmlFile": "docs/research/source-html/2025__03__15__3-rollers-3000mm-flatwork-ironers-deliveried-to-domestic-customer-2.html"
+    },
+    {
+      "ok": true,
+      "url": "https://www.sharinglaundry.com/2024/08/05/sharing-joined-in-2024-shanghai-texcare-exhibition-in-auguest/",
+      "title": "Sharing Joined in 2024 Shanghai Texcare Exhibition in Auguest - Wuxi Sharing Machinery Co.,Ltd",
+      "status": 0,
+      "reused": true,
+      "attempts": 0,
+      "htmlFile": "docs/research/source-html/2024__08__05__sharing-joined-in-2024-shanghai-texcare-exhibition-in-auguest.html"
+    }
+  ],
+  "downloads": [
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/250X100.png",
+      "publicPath": "/wp-assets/uploads/250X100.png",
+      "kind": "image",
+      "ok": true,
+      "bytes": 4259,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/993387aae0b0.frontend.css",
+      "publicPath": "/wp-assets/cache/flying-press/993387aae0b0.frontend.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 70533,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/63a343d62eef.woo-products.css",
+      "publicPath": "/wp-assets/cache/flying-press/63a343d62eef.woo-products.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 4092,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/e98f5279caca.woocommerce-layout.css",
+      "publicPath": "/wp-assets/cache/flying-press/e98f5279caca.woocommerce-layout.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 19716,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/59d266c0ea58.woocommerce-smallscreen.css",
+      "publicPath": "/wp-assets/cache/flying-press/59d266c0ea58.woocommerce-smallscreen.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 7528,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/1eb298bdcbd0.woocommerce.css",
+      "publicPath": "/wp-assets/cache/flying-press/1eb298bdcbd0.woocommerce.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 87701,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/a5bf64d5859e.header-footer-elementor.css",
+      "publicPath": "/wp-assets/cache/flying-press/a5bf64d5859e.header-footer-elementor.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 493,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/343a9e8b53b8.elementor-icons.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/343a9e8b53b8.elementor-icons.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 22109,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/4fb5f7fc5e41.frontend.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/4fb5f7fc5e41.frontend.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 54652,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/a5bd36e9e5ce.post-7.css",
+      "publicPath": "/wp-assets/cache/flying-press/a5bd36e9e5ce.post-7.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1561,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/74bab4578692.all.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/74bab4578692.all.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 60796,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/c55205bce667.v4-shims.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/c55205bce667.v4-shims.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 26702,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/8dd1589e817d.widget-gallery.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/8dd1589e817d.widget-gallery.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 5946,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/f830afb02995.e-gallery.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/f830afb02995.e-gallery.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 3296,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/52e9782ff6a6.transitions.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/52e9782ff6a6.transitions.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 7256,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/c74a0705a32d.post-443.css",
+      "publicPath": "/wp-assets/cache/flying-press/c74a0705a32d.post-443.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1219,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/af4b9638d699.reset.css",
+      "publicPath": "/wp-assets/cache/flying-press/af4b9638d699.reset.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 5436,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/a480d2bf8c52.theme.css",
+      "publicPath": "/wp-assets/cache/flying-press/a480d2bf8c52.theme.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 5096,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/86dbb47955bb.header-footer.css",
+      "publicPath": "/wp-assets/cache/flying-press/86dbb47955bb.header-footer.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 7183,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/12045858d487.widget-image.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/12045858d487.widget-image.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 214,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/c3be9e612baf.widget-heading.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/c3be9e612baf.widget-heading.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 560,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/1c6df716953f.widget-icon-list.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/1c6df716953f.widget-icon-list.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 10255,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/d026a17938c5.widget-social-icons.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/d026a17938c5.widget-social-icons.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 5110,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/f94a49c4961b.apple-webkit.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/f94a49c4961b.apple-webkit.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 6713,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/29a94b14d46a.widget-form.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/29a94b14d46a.widget-form.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 6797,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/3034ff16bd46.popup.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/3034ff16bd46.popup.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 989,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/2af58d573675.post-40.css",
+      "publicPath": "/wp-assets/cache/flying-press/2af58d573675.post-40.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 10892,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/bc334ad52759.post-304.css",
+      "publicPath": "/wp-assets/cache/flying-press/bc334ad52759.post-304.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 11414,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/935964d84749.post-261.css",
+      "publicPath": "/wp-assets/cache/flying-press/935964d84749.post-261.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 5043,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/1f1c6abbb54c.brands.css",
+      "publicPath": "/wp-assets/cache/flying-press/1f1c6abbb54c.brands.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1163,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/aae648ec4102.fontawesome.css",
+      "publicPath": "/wp-assets/cache/flying-press/aae648ec4102.fontawesome.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 58099,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/8d37441d69eb.solid.css",
+      "publicPath": "/wp-assets/cache/flying-press/8d37441d69eb.solid.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1157,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/00a91ba36177.widget-blockquote.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/00a91ba36177.widget-blockquote.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 5213,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/ab4986b83c3d.widget-mega-menu.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/ab4986b83c3d.widget-mega-menu.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 19774,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/b643cf05b87f.widget-nav-menu.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/b643cf05b87f.widget-nav-menu.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 27303,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/b5182f90473f.style.css",
+      "publicPath": "/wp-assets/cache/flying-press/b5182f90473f.style.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 0,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/1d989ab2ea53.roboto.css",
+      "publicPath": "/wp-assets/cache/flying-press/1d989ab2ea53.roboto.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 96048,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/4069cfb84315.robotoslab.css",
+      "publicPath": "/wp-assets/cache/flying-press/4069cfb84315.robotoslab.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 22059,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/f4af7e5ec05e.fontawesome.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/f4af7e5ec05e.fontawesome.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 58070,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/9eb2d3c87feb.solid.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/9eb2d3c87feb.solid.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1153,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/3eef8c9e589a.regular.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/3eef8c9e589a.regular.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1161,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/144e43c3b3d8.brands.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/144e43c3b3d8.brands.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1159,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/e2d671c403c7.wc-blocks.css",
+      "publicPath": "/wp-assets/cache/flying-press/e2d671c403c7.wc-blocks.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 13999,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/jquery/jquery.min.js?ver=826eb77e86b0",
+      "publicPath": "/wp-assets/wp-includes/js/jquery/jquery.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 87553,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=9ffeb32e2d9e",
+      "publicPath": "/wp-assets/wp-includes/js/jquery/jquery-migrate.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 13577,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=ef56117d1bb5",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 9636,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=691a1e43450e",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 1720,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=abf4bb282c65",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/frontend/woocommerce.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 4131,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=ef17c8ffc514",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 15073,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1",
+      "publicPath": "/wp-assets/wp-includes/js/wp-emoji-release.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 22762,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=883a3e2185da",
+      "publicPath": "/wp-assets/plugins/elementor/assets/js/webpack.runtime.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 5677,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=73c07e9630db",
+      "publicPath": "/wp-assets/plugins/elementor/assets/js/frontend-modules.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 50503,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/jquery/ui/core.min.js?ver=da215ae12b95",
+      "publicPath": "/wp-assets/wp-includes/js/jquery/ui/core.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 21464,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=ceb183b138ea",
+      "publicPath": "/wp-assets/plugins/elementor/assets/js/frontend.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 31880,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js?ver=a095cc82c250",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 15347,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=1d18b2ccd0ac",
+      "publicPath": "/wp-assets/themes/hello-elementor/assets/js/hello-frontend.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 1830,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/daaf84c09866.frontend.js",
+      "publicPath": "/wp-assets/cache/flying-press/daaf84c09866.frontend.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 24230,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=fc06080ebf97",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 15315,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=46a816ff38bd",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/frontend/order-attribution.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 2439,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=d09daa150f60",
+      "publicPath": "/wp-assets/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 6248,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/dist/hooks.min.js?ver=90e932bd9e62",
+      "publicPath": "/wp-assets/wp-includes/js/dist/hooks.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 5661,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/dist/i18n.min.js?ver=3a5838d1182e",
+      "publicPath": "/wp-assets/wp-includes/js/dist/i18n.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 5314,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=adab4a903263",
+      "publicPath": "/wp-assets/plugins/elementor-pro/assets/js/frontend.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 24047,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3ee7bb8cff70",
+      "publicPath": "/wp-assets/plugins/elementor-pro/assets/js/elements-handlers.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 44258,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5d424e898a417.jpg",
+      "publicPath": "/wp-assets/uploads/5d424e898a417.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 197814,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/jquery/jquery.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/jquery/jquery.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 87553,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/jquery/jquery-migrate.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/jquery/jquery-migrate.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 13577,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 9636,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 1720,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/frontend/woocommerce.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 4131,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 15073,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/wp-emoji-release.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/wp-emoji-release.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 22762,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5d424e83ec996.jpg",
+      "publicPath": "/wp-assets/uploads/5d424e83ec996.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 325980,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js",
+      "publicPath": "/wp-assets/plugins/elementor/assets/js/webpack.runtime.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 5677,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js",
+      "publicPath": "/wp-assets/plugins/elementor/assets/js/frontend-modules.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 50503,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/jquery/ui/core.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/jquery/ui/core.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 21464,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/js/frontend.min.js",
+      "publicPath": "/wp-assets/plugins/elementor/assets/js/frontend.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 31880,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 15347,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.js",
+      "publicPath": "/wp-assets/themes/hello-elementor/assets/js/hello-frontend.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 1830,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 15315,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/js/frontend/order-attribution.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 2439,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js",
+      "publicPath": "/wp-assets/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 6248,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/dist/hooks.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/dist/hooks.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 5661,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/dist/i18n.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/dist/i18n.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 5314,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js",
+      "publicPath": "/wp-assets/plugins/elementor-pro/assets/js/frontend.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 24047,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js",
+      "publicPath": "/wp-assets/plugins/elementor-pro/assets/js/elements-handlers.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 44258,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-includes/js/wp-emoji-loader.min.js",
+      "publicPath": "/wp-assets/wp-includes/js/wp-emoji-loader.min.js",
+      "kind": "js",
+      "ok": true,
+      "bytes": 2890,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/85ec72f5e6d7.post-518.css",
+      "publicPath": "/wp-assets/cache/flying-press/85ec72f5e6d7.post-518.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1219,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5dbce62a3566b.jpg",
+      "publicPath": "/wp-assets/uploads/5dbce62a3566b.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 115086,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5dbce68145342.jpg",
+      "publicPath": "/wp-assets/uploads/5dbce68145342.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 121090,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5dbce6af5d7ad.jpg",
+      "publicPath": "/wp-assets/uploads/5dbce6af5d7ad.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 244739,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5dbce69869afa.jpg",
+      "publicPath": "/wp-assets/uploads/5dbce69869afa.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 103767,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/c39560cb2513.post-508.css",
+      "publicPath": "/wp-assets/cache/flying-press/c39560cb2513.post-508.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1219,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5daebb13797c0.jpg",
+      "publicPath": "/wp-assets/uploads/5daebb13797c0.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 210870,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5daebafac4688.jpg",
+      "publicPath": "/wp-assets/uploads/5daebafac4688.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 55300,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5daebb0575ff4.jpg",
+      "publicPath": "/wp-assets/uploads/5daebb0575ff4.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 306134,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/eb95c9932cac.post-1263.css",
+      "publicPath": "/wp-assets/cache/flying-press/eb95c9932cac.post-1263.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1222,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Switzerland-1.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Switzerland-1.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 193318,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Switzerland-2.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Switzerland-2.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 249651,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Switzerland-3.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Switzerland-3.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 172502,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Switzerland-5.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Switzerland-5.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 222685,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/483681c0abc9.post-1254.css",
+      "publicPath": "/wp-assets/cache/flying-press/483681c0abc9.post-1254.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1221,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Slovakia-3.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Slovakia-3.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 233853,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Slovakia-1.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Slovakia-1.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 201098,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Slovakia-2.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Slovakia-2.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 257198,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Slovakia-4.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Slovakia-4.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 249918,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/aedfae04460c.post-1293.css",
+      "publicPath": "/wp-assets/cache/flying-press/aedfae04460c.post-1293.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1222,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Texcare-2.jpg",
+      "publicPath": "/wp-assets/uploads/Texcare-2.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 279600,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Texcare-1.jpg",
+      "publicPath": "/wp-assets/uploads/Texcare-1.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 267430,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Texcare-3.jpg",
+      "publicPath": "/wp-assets/uploads/Texcare-3.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 177513,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Texcare-4.jpg",
+      "publicPath": "/wp-assets/uploads/Texcare-4.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 162206,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/bdd1888308db.post-1268.css",
+      "publicPath": "/wp-assets/cache/flying-press/bdd1888308db.post-1268.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 1222,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Canada-1.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Canada-1.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 221034,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Canada-2.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Canada-2.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 70835,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Canada-3.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Canada-3.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 94114,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/Delivery-to-Canada-4.jpg",
+      "publicPath": "/wp-assets/uploads/Delivery-to-Canada-4.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 64679,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-19.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-19.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 210556,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-19-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-19-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 92729,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-19-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-19-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 63512,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-17.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-17.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 174364,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-17-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-17-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 77221,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-17-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-17-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 52952,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-16.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-16.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 175082,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-16-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-16-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 77746,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-16-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-16-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 53655,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-15.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-15.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 182302,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-15-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-15-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 80239,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-15-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-15-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 55159,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-14.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-14.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 179162,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-14-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-14-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 79572,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-14-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-14-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 55078,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-13.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-13.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 179603,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-13-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-13-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 80055,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-13-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-13-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 55251,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-12.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-12.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 180120,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-12-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-12-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 80996,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-12-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-12-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 55595,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-4.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-4.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 122419,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-4-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-4-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 78252,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/5X40HQ-4-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/5X40HQ-4-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 53870,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/cache/flying-press/b592e353685f.style.min.css",
+      "publicPath": "/wp-assets/cache/flying-press/b592e353685f.style.min.css",
+      "kind": "css",
+      "ok": true,
+      "bytes": 119329,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05702.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05702.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 164341,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05702-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05702-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 72638,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05702-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05702-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 50171,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05751.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05751.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 165154,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05751-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05751-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 73963,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05751-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05751-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 51128,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05771.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05771.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 174778,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05771-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05771-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 78819,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/IMG_05771-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/IMG_05771-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 54240,
+      "skipped": false,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-3.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-3.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 227899,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-3-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-3-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 100591,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-3-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-3-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 69663,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-2.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-2.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 243635,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-2-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-2-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 107511,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-2-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-2-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 74559,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-1.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-1.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 254602,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-1-768x576.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-1-768x576.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 112458,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-1-600x450.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-1-600x450.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 77930,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/texcare-2024-5.jpg",
+      "publicPath": "/wp-assets/uploads/texcare-2024-5.jpg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 257239,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff2",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/fonts/WooCommerce.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 6488,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/fonts/WooCommerce.woff",
+      "kind": "font",
+      "ok": true,
+      "bytes": 8084,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/loader.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/loader.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 158,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 1359,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 4634,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/laser.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 3110,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 804,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/maestro.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 6797,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 2800,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 4662,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+      "publicPath": "/wp-assets/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 2185,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.47.0",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 105172,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.47.0",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/eicons/fonts/eicons.woff",
+      "kind": "font",
+      "ok": true,
+      "bytes": 129620,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.47.0",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/eicons/fonts/eicons.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 361523,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 81612,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff",
+      "kind": "font",
+      "ok": true,
+      "bytes": 97804,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 749223,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 13276,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff",
+      "kind": "font",
+      "ok": true,
+      "bytes": 16276,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.svg",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 144714,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 78196,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff",
+      "kind": "font",
+      "ok": true,
+      "bytes": 101652,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg",
+      "publicPath": "/wp-assets/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg",
+      "kind": "image",
+      "ok": true,
+      "bytes": 918991,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkc3kawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkc3kawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 39456,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkankawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkankawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 24576,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcnkawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcnkawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 4468,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbxkawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbxkawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 18800,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkenkawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkenkawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 44336,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkahkawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkahkawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 22288,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcxkawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcxkawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 13888,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkchkawzu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkchkawzu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 28536,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbnka.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbnka.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 44192,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3gubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3gubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 35568,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3iubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3iubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 22796,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3cubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3cubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 4340,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3-ubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3-ubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 17628,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamawcubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamawcubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 40572,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamaxkubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamaxkubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 20408,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3oubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3oubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 13004,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3kubgee.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3kubgee.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 26428,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 40128,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufa5qw54a.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufa5qw54a.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 32340,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufj5qw54a.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufj5qw54a.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 21364,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufb5qw54a.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufb5qw54a.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 2220,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufo5qw54a.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufo5qw54a.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 14868,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufc5qw54a.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufc5qw54a.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 9980,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufd5qw54a.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufd5qw54a.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 21200,
+      "skipped": true,
+      "error": ""
+    },
+    {
+      "sourceUrl": "https://www.sharinglaundry.com/wp-content/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufn5qu.woff2",
+      "publicPath": "/wp-assets/uploads/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufn5qu.woff2",
+      "kind": "font",
+      "ok": true,
+      "bytes": 34236,
+      "skipped": true,
+      "error": ""
+    }
+  ]
+}

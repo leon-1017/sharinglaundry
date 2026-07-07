@@ -1,0 +1,118 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - generic [ref=e9]:
+      - link [ref=e14] [cursor=pointer]:
+        - /url: https://www.sharinglaundry.com
+      - button "Menu Toggle" [ref=e494] [cursor=pointer]:
+        - generic [ref=e495]: Menu
+        - generic [ref=e497]: 
+  - main [ref=e39]:
+    - generic [ref=e41]:
+      - generic [ref=e46]:
+        - heading "Your Professional Laundry Project Solution Expert" [level=1] [ref=e49]
+        - list [ref=e56]:
+          - listitem [ref=e57]: Provide high-quality, highly-efficient, energy-saving laundry equipment at the best price.
+          - listitem [ref=e58]: Sharing is your optimum partner if you are looking for more efficient and lower-cost equipment for your laundry business!
+        - link "See More Products" [ref=e66] [cursor=pointer]:
+          - /url: https://www.sharinglaundry.com/products/
+          - generic [ref=e67]
+        - generic [ref=e72]:
+          - link [ref=e77] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/washer-extractors/
+          - link [ref=e82] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/washer-extractors/
+          - link [ref=e87] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/tumble-dryers/
+          - link [ref=e92] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/tumble-dryers/
+        - generic [ref=e94]:
+          - link [ref=e99] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/washer-extractors/
+          - link [ref=e104] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/tumble-dryers/
+          - link [ref=e109] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/flatwork-ironers/
+          - link [ref=e114] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/products/folders/
+      - generic [ref=e116]:
+        - generic [ref=e118]:
+          - generic [ref=e123]: 
+          - heading "QUALITY" [level=2] [ref=e126]
+          - paragraph [ref=e129]: We use good quality spare parts for all laundry machines, and the using life will be longer.
+        - generic [ref=e131]:
+          - generic [ref=e136]: 
+          - heading "EXPERT" [level=2] [ref=e139]
+          - paragraph [ref=e142]: We have 20 years experience in laundry equipment, can give you the professional solutions.
+        - generic [ref=e144]:
+          - generic [ref=e149]: 
+          - heading "PRICE" [level=2] [ref=e152]
+          - paragraph [ref=e155]: The price of our laundry machines is better, will help you to save much investment cost for laundry business.
+      - generic [ref=e163]:
+        - heading "What We Do" [level=2] [ref=e166]
+        - paragraph [ref=e173]: Wuxi Sharing Machinery Co.,Ltd located in East of China, 100km away from Shanghai, specializes in manufacturing and selling China best quality commercial and industrial laundry equipment, including washer extractor,tumble dryer,flatwork ironer, folder, dry cleaning machine, laundry pressing machine and finishing equipment, etc.
+      - generic [ref=e180]:
+        - generic [ref=e182]:
+          - heading "Why Choose Us" [level=2] [ref=e185]
+          - generic [ref=e192]
+          - generic [ref=e201]
+          - generic [ref=e210]
+          - generic [ref=e219]
+        - generic [ref=e227]:
+          - heading "Request an Offer" [level=4] [ref=e230]
+          - paragraph [ref=e233]: To get started, please fill out the contact form below. Our team will respond to your inquiry as soon as possible.
+          - form "New Form" [ref=e236]
+          - paragraph [ref=e253]: We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
+      - generic [ref=e258]:
+        - heading "Cooperative Partners" [level=2] [ref=e261]
+        - heading "Our expert team specializes in commercial laundry solutions and garment industrial washing technologies." [level=6] [ref=e268]
+        - generic [ref=e271]:
+          - img [ref=e484]
+          - img [ref=e486]
+          - img [ref=e488]
+          - img [ref=e490]
+          - img [ref=e492]
+      - generic [ref=e280]:
+        - heading "Our Customer Say" [level=2] [ref=e287]
+        - generic [ref=e293]:
+          - generic [ref=e295]
+          - generic [ref=e312]
+        - generic [ref=e329]:
+          - generic [ref=e331]
+          - generic [ref=e348]
+      - generic [ref=e368]:
+        - heading "HOTLINE 24/7" [level=6] [ref=e371]
+        - heading "+86-13606196136, 13861751289" [level=2] [ref=e374]
+        - heading "Start Your Laundry Business Today" [level=6] [ref=e381]
+        - link "Contact Our Team" [ref=e385] [cursor=pointer]:
+          - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjI2MSIsInRvZ2dsZSI6ZmFsc2V9"
+          - generic [ref=e386]
+  - contentinfo [ref=e390]:
+    - generic [ref=e392]:
+      - link [ref=e397] [cursor=pointer]:
+        - /url: https://www.sharinglaundry.com
+      - text: 
+      - generic [ref=e423]:
+        - heading "Contact us" [level=2] [ref=e426]
+        - list [ref=e429]:
+          - listitem [ref=e430]
+          - listitem [ref=e434]
+          - listitem [ref=e438]
+          - listitem [ref=e442]
+        - link "Chat on WhatsApp" [ref=e450] [cursor=pointer]:
+          - /url: https://wa.me/+8613606196136
+          - generic [ref=e451]
+        - link "Chat on Skype" [ref=e458] [cursor=pointer]:
+          - /url: skype:jiaqifu1986?chat
+          - generic [ref=e459]
+    - generic [ref=e464]:
+      - generic [ref=e469]: Copyright © 2026 Wuxi Sharing Machinery Co.,Ltd
+      - list [ref=e474]:
+        - listitem [ref=e475]:
+          - link "Facebook" [ref=e476] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=100011834623780
+        - listitem [ref=e479]:
+          - link "Linkedin" [ref=e480] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/mark-jia-364601b8?trk=nav_responsive_tab_profile_pic
+  - generic [ref=e483]: mobile

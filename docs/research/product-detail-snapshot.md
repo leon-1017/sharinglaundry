@@ -1,0 +1,90 @@
+- generic [active] [ref=f4e1]:
+  - link "Skip to content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=f4e3]:
+    - generic [ref=f4e9]:
+      - link [ref=f4e14] [cursor=pointer]:
+        - /url: https://www.sharinglaundry.com
+      - navigation [ref=f4e20]:
+        - list [ref=f4e21]:
+          - listitem [ref=f4e22]
+          - listitem [ref=f4e24]
+          - listitem [ref=f4e26]
+          - listitem [ref=f4e31]
+          - listitem [ref=f4e33]
+          - listitem [ref=f4e35]
+          - listitem [ref=f4e37]
+  - main [ref=f4e40]:
+    - navigation "Breadcrumb" [ref=f4e41]:
+      - link "Home" [ref=f4e42] [cursor=pointer]:
+        - /url: https://www.sharinglaundry.com
+      - text: /
+      - link "Washer Extractors" [ref=f4e43] [cursor=pointer]:
+        - /url: https://www.sharinglaundry.com/product-category/washer-extractors/
+      - text: / Laundry Washing Machine
+    - generic [ref=f4e44]:
+      - generic [ref=f4e45]:
+        - button "View full-screen image gallery" [ref=f4e46] [cursor=pointer]:
+          - img [ref=f4e48]
+        - generic [ref=f4e49]:
+          - generic
+        - list [ref=f4e57]:
+          - listitem [ref=f4e58]
+          - listitem [ref=f4e60]
+      - generic [ref=f4e62]:
+        - heading "Laundry Washing Machine" [level=1] [ref=f4e63]
+        - paragraph
+        - generic [ref=f4e65]:
+          - text: "Category:"
+          - link "Washer Extractors" [ref=f4e66] [cursor=pointer]:
+            - /url: https://www.sharinglaundry.com/product-category/washer-extractors/
+      - generic [ref=f4e67]:
+        - tablist [ref=f4e68]:
+          - tab "Description" [selected] [ref=f4e69] [cursor=pointer]
+          - tab "Technical Parameters" [ref=f4e70] [cursor=pointer]
+        - tabpanel "Description" [ref=f4e71]:
+          - heading "Description" [level=2] [ref=f4e72]
+          - paragraph [ref=f4e73]: 1. The fully automatic washer extractor belongs to heavy duty industrial laundry washing machine, which adopts the popular suspension structure at home and abroad , combined with many year’s production technology and precipitation to optimize it , so as to ensure stable operation for many years in the laundry factory’s high-intensity operation .
+          - paragraph [ref=f4e74]: 2. The two-way Swedish imported brand FORSHEDA flexible sealing waterproof design, the sealing body relaxes at high speed extracting and low speed washing, and can reach the five-year replacement cycle under high frequency and high strength working conditions.
+          - paragraph [ref=f4e75]: 3. The upper motor structure , coupled with the washing machine special frequency converter , ventilation and heat dissipation , easy to maintain . Ensure stable operation in high temperature , high humidity and plush environment in the laundry room .
+          - paragraph [ref=f4e76]: 4. Using 720mm large caliber loading door , easy to operate , reduce the possibility of pulling the grass .
+          - paragraph [ref=f4e77]: 5. The damping spring and the hydraulic damper optimization combination , the shock absorption rate up to 98%, no need to fix the installation . In the meantime , the shaft system is fixed with special locking plate , which can avoid mechanical failure caused by vibration .
+          - paragraph [ref=f4e78]: 6. Adopting the domestic top brand Punp professional intelligent computer controller, the operation interface is clear at a glance, with 30 sets of automatic programs built in, which can be freely programmed.
+      - generic [ref=f4e79]:
+        - heading "Related products" [level=2] [ref=f4e80]
+        - list [ref=f4e81]:
+          - listitem [ref=f4e82]
+          - listitem [ref=f4e88]
+          - listitem [ref=f4e94]
+          - listitem [ref=f4e100]
+  - contentinfo [ref=f4e106]:
+    - generic [ref=f4e108]:
+      - link [ref=f4e113] [cursor=pointer]:
+        - /url: https://www.sharinglaundry.com
+      - generic [ref=f4e115]:
+        - heading "Products" [level=2] [ref=f4e118]
+        - navigation [ref=f4e122]:
+          - list [ref=f4e123]
+      - generic [ref=f4e139]:
+        - heading "Contact us" [level=2] [ref=f4e142]
+        - list [ref=f4e145]:
+          - listitem [ref=f4e146]
+          - listitem [ref=f4e150]
+          - listitem [ref=f4e154]
+          - listitem [ref=f4e158]
+        - link "Chat on WhatsApp" [ref=f4e166] [cursor=pointer]:
+          - /url: https://wa.me/+8613606196136
+          - generic [ref=f4e167]
+        - link "Chat on Skype" [ref=f4e174] [cursor=pointer]:
+          - /url: skype:jiaqifu1986?chat
+          - generic [ref=f4e175]
+    - generic [ref=f4e180]:
+      - generic [ref=f4e185]: Copyright © 2026 Wuxi Sharing Machinery Co.,Ltd
+      - list [ref=f4e190]:
+        - listitem [ref=f4e191]:
+          - link "Facebook" [ref=f4e192] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=100011834623780
+        - listitem [ref=f4e195]:
+          - link "Linkedin" [ref=f4e196] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/mark-jia-364601b8?trk=nav_responsive_tab_profile_pic
+  - generic [ref=f4e199]: desktop

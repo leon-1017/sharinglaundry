@@ -1,0 +1,29 @@
+---
+import EntryCard from "./EntryCard.astro";
+import type { SiteEntry } from "../types/content";
+
+const { title, eyebrow, entries, emptyMessage } = Astro.props as {
+  title: string;
+  eyebrow?: string;
+  entries: SiteEntry[];
+  emptyMessage?: string;
+};
+---
+
+<section class="space-y-6">
+  <div>
+    {eyebrow ? <div class="mb-1 text-[11px] font-bold uppercase tracking-[0.26em] text-[var(--site-blue)]">{eyebrow}</div> : null}
+    <h2 class="site-section-title">{title}</h2>
+  </div>
+  {
+    entries.length ? (
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {entries.map((entry) => <EntryCard entry={entry} />)}
+      </div>
+    ) : (
+      <p class="rounded border border-dashed border-[var(--site-line)] px-4 py-8 text-center text-sm text-slate-500">
+        {emptyMessage || "No entries available."}
+      </p>
+    )
+  }
+</section>

@@ -1,0 +1,21 @@
+---
+import type { SiteEntry } from "../types/content";
+
+const { entry, eyebrow } = Astro.props as { entry: SiteEntry; eyebrow?: string };
+---
+
+<a href={entry.path} class="card-link overflow-hidden">
+  {
+    entry.image ? (
+      <div class="aspect-[4/3] overflow-hidden bg-[#f3f5f8]">
+        <img src={entry.image} alt={entry.title} class="h-full w-full object-cover transition duration-300 hover:scale-[1.03]" loading="lazy" />
+      </div>
+    ) : null
+  }
+  <div class="space-y-[10px] p-[18px]">
+    {eyebrow ? <div class="text-[10px] font-semibold uppercase text-[var(--site-blue)]">{eyebrow}</div> : null}
+    <h3 class="text-[17px] font-bold leading-tight text-[#0f3d73]">{entry.title}</h3>
+    <p class="text-[12px] leading-[1.45] text-[#777]">{entry.description}</p>
+    <span class="inline-flex text-[12px] font-bold text-[var(--site-blue)]">View details</span>
+  </div>
+</a>

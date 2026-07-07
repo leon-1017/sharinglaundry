@@ -1,0 +1,158 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import InquiryForm from "../components/InquiryForm.astro";
+import EntryGrid from "../components/EntryGrid.astro";
+import {
+  formatDate,
+  getEntries,
+  getProductCategory,
+  getProductCollection,
+  getProductsForCategory,
+  getRelatedEntries,
+} from "../lib/site";
+
+export function getStaticPaths() {
+  return getEntries()
+    .filter((entry) => entry.path !== "/")
+    .map((entry) => ({
+      params: {
+        slug: entry.path.replace(/^\/|\/$/g, ""),
+      },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const allProducts = getProductCollection();
+const isProduct = entry.kind === "product";
+const isContact = entry.path === "/contact-us/";
+const isListing =
+  entry.kind === "productCategory" ||
+  entry.kind === "category" ||
+  entry.path === "/products/" ||
+  entry.path === "/shop/" ||
+  entry.path === "/news/";
+const listingEntries =
+  entry.path === "/products/" || entry.path === "/shop/"
+    ? allProducts
+    : entry.path === "/news/" || entry.kind === "category"
+      ? getEntries().filter((item) => item.kind === "post")
+      : entry.kind === "productCategory"
+        ? getProductsForCategory(entry.path)
+        : getRelatedEntries(entry);
+const related = getRelatedEntries(entry);
+const productCategory = isProduct ? getProductCategory(entry) : null;
+const productImages = [...new Set([entry.image, ...entry.images].filter(Boolean))];
+---
+
+<MainLayout title={`${entry.title} - Wuxi Sharing Machinery Co.,Ltd`} description={entry.description} image={entry.image}>
+  {
+    isProduct ? (
+      <main class="pb-[60px]">
+        <nav class="pixel-container py-[18px] text-[13px] text-[#777]">
+          <a href="/" class="hover:text-[var(--site-blue)]">Home</a>
+          <span class="px-2">/</span>
+          <a href={productCategory?.href} class="hover:text-[var(--site-blue)]">{productCategory?.label}</a>
+          <span class="px-2">/</span>
+          <span>{entry.title}</span>
+        </nav>
+
+        <section class="pixel-container grid gap-[48px] py-[28px] md:grid-cols-[520px_1fr]">
+          <div>
+            <div class="border border-[#e5e5e5] bg-white p-[12px]">
+              {entry.image ? (
+                <img src={entry.image} alt={entry.title} class="aspect-square w-full object-cover" />
+              ) : (
+                <div class="aspect-square bg-[#f1f1f1]" />
+              )}
+            </div>
+            <div class="mt-[15px] flex gap-[12px]">
+              {productImages.slice(0, 3).map((image) => (
+                <div class="h-[82px] w-[82px] border border-[#d5d5d5] p-[4px]">
+                  <img src={image} alt={entry.title} class="h-full w-full object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="pt-[10px]">
+            <h1 class="text-[31px] font-normal leading-tight text-[#333]">{entry.title}</h1>
+            <div class="my-[26px] h-px bg-[#e5e5e5]"></div>
+            <p class="text-[14px] leading-[1.7] text-[#777]">{entry.description}</p>
+            <div class="mt-[22px] text-[13px] text-[#777]">
+              <span>Category: </span>
+              <a href={productCategory?.href} class="text-[var(--site-blue)]">{productCategory?.label}</a>
+            </div>
+            <a href="/contact-us/" class="btn-primary mt-[30px]">Request an Offer</a>
+          </div>
+        </section>
+
+        <section class="pixel-container pt-[28px]">
+          <div class="border-b border-[#d3d3d3]">
+            <button class="border border-b-0 border-[#d3d3d3] bg-white px-[22px] py-[12px] text-[14px] font-bold text-[#333]">Description</button>
+            <button class="ml-[4px] border border-b-0 border-[#d3d3d3] bg-[#f7f7f7] px-[22px] py-[12px] text-[14px] text-[#777]">Technical Parameters</button>
+          </div>
+          <article class="content-prose border border-t-0 border-[#d3d3d3] px-[28px] py-[26px]" set:html={entry.contentHtml}></article>
+        </section>
+
+        <section class="pixel-container pt-[54px]">
+          <h2 class="mb-[26px] text-[25px] font-normal text-[#333]">Related products</h2>
+          <div class="grid gap-[28px] sm:grid-cols-2 lg:grid-cols-4">
+            {related.slice(0, 4).map((item) => (
+              <a href={item.path} class="block text-center">
+                <div class="aspect-square border border-[#e5e5e5] bg-[#f5f5f5]">
+                  {item.image ? <img src={item.image} alt={item.title} class="h-full w-full object-cover" /> : null}
+                </div>
+                <h3 class="mt-[14px] text-[14px] font-bold text-[var(--site-blue)]">{item.title}</h3>
+              </a>
+            ))}
+          </div>
+        </section>
+      </main>
+    ) : isContact ? (
+      <main>
+        <section class="pixel-container py-[58px]">
+          <h1 class="site-section-title">{entry.title}</h1>
+          <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
+        </section>
+        <section class="bg-[var(--site-gray-band)] py-[72px]">
+          <div class="pixel-container grid gap-[60px] md:grid-cols-[0.9fr_1fr]">
+            <div class="text-white">
+              <h2 class="site-section-title !text-[var(--site-blue)]">Contact us</h2>
+              <div class="mt-[34px] grid gap-[14px] text-[14px]">
+                <p>No.588, Nanhu Avenue, Wuxi City, China</p>
+                <p>+86-51066206136</p>
+                <p>+86-13606196136</p>
+                <p>info@sharinglaundry.com</p>
+              </div>
+            </div>
+            <InquiryForm compact={true} />
+          </div>
+        </section>
+      </main>
+    ) : isListing ? (
+      <main class="bg-white">
+        <section class="pixel-container py-[58px]">
+          <h1 class="site-section-title">{entry.title}</h1>
+          <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
+        </section>
+        <section class="bg-[#f4f8fc] py-[62px]">
+          <div class="pixel-container">
+            <EntryGrid title={entry.path === "/news/" ? "News" : "Products"} entries={listingEntries} />
+          </div>
+        </section>
+      </main>
+    ) : (
+      <main>
+        <section class="pixel-container py-[58px]">
+          <h1 class="site-section-title">{entry.title}</h1>
+          {entry.datePublished ? <p class="mt-[22px] text-[13px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
+          {entry.image ? (
+            <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
+          ) : null}
+          <article class="content-prose mt-[34px]" set:html={entry.contentHtml}></article>
+        </section>
+      </main>
+    )
+  }
+</MainLayout>
