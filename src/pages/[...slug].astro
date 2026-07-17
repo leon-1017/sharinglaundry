@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import InquiryForm from "../components/InquiryForm.astro";
 import EntryGrid from "../components/EntryGrid.astro";
+import ProductGrid from "../components/ProductGrid.astro";
 import {
   formatDate,
   getEntries,
@@ -31,21 +32,39 @@ const isListing =
   entry.kind === "category" ||
   entry.path === "/products/" ||
   entry.path === "/shop/" ||
-  entry.path === "/news/";
+  entry.path === "/news/" ||
+  (entry.path.startsWith("/products/") && entry.path !== "/products/");
+
+// 列表页使用 entry.listingProducts（真实数据）;否则按类型推断
+const listingProducts =
+  entry.listingProducts && entry.listingProducts.length > 0
+    ? entry.listingProducts
+    : null;
 const listingEntries =
-  entry.path === "/products/" || entry.path === "/shop/"
-    ? allProducts
-    : entry.path === "/news/" || entry.kind === "category"
-      ? getEntries().filter((item) => item.kind === "post")
-      : entry.kind === "productCategory"
-        ? getProductsForCategory(entry.path)
-        : getRelatedEntries(entry);
+  listingProducts
+    ? [] // 产品卡由 ProductGrid 渲染
+    : entry.path === "/products/" || entry.path === "/shop/"
+      ? allProducts
+      : entry.path === "/news/" || entry.kind === "category"
+        ? getEntries().filter((item) => item.kind === "post")
+        : entry.kind === "productCategory"
+          ? getProductsForCategory(entry.path)
+          : getRelatedEntries(entry);
 const related = getRelatedEntries(entry);
 const productCategory = isProduct ? getProductCategory(entry) : null;
 const productImages = [...new Set([entry.image, ...entry.images].filter(Boolean))];
+
+// 为重复路径提供 canonical(主要路径)
+const canonicalHref =
+  entry.path.startsWith("/products/") && entry.path !== "/products/"
+    ? entry.path.replace("/products/", "/product-category/") +
+      (entry.path === "/products/" ? "" : "")
+    : entry.path === "/shop/"
+      ? "/products/"
+      : null;
 ---
 
-<MainLayout title={`${entry.title} - Wuxi Sharing Machinery Co.,Ltd`} description={entry.description} image={entry.image}>
+<MainLayout title={`${entry.title} - Wuxi Sharing Machinery Co.,Ltd`} description={entry.description} image={entry.image} canonical={canonicalHref || undefined}>
   {
     isProduct ? (
       <main class="pb-[60px]">
@@ -163,7 +182,17 @@ const productImages = [...new Set([entry.image, ...entry.images].filter(Boolean)
         </section>
         <section class="bg-[#f4f8fc] py-[62px]">
           <div class="pixel-container">
-            <EntryGrid title={entry.path === "/news/" ? "News" : "Products"} entries={listingEntries} />
+            {listingProducts ? (
+              <ProductGrid
+                title={entry.path === "/news/" ? "News" : "Products"}
+                products={listingProducts}
+              />
+            ) : (
+              <EntryGrid
+                title={entry.path === "/news/" ? "News" : "Products"}
+                entries={listingEntries}
+              />
+            )}
           </div>
         </section>
       </main>

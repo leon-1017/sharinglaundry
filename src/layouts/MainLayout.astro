@@ -7,7 +7,12 @@ const {
   title = "Sharing Laundry",
   description = "Commercial and industrial laundry equipment static site",
   image = "",
+  canonical = "",
 } = Astro.props;
+
+const canonicalUrl = canonical
+  ? new URL(canonical, Astro.site ?? Astro.url).toString()
+  : Astro.url.href;
 ---
 
 <!doctype html>
@@ -23,6 +28,7 @@ const {
     <meta property="og:url" content={Astro.url.href} />
     {image ? <meta property="og:image" content={new URL(image, Astro.site).toString()} /> : null}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
   </head>
   <body>
     <Header />

@@ -1,0 +1,49 @@
+---
+/**
+ * 产品分类列表页专用的产品卡片网格
+ * 渲染 entry.listingProducts 中的真实数据(title, href, image)
+ */
+const { title, eyebrow, products, emptyMessage } = Astro.props as {
+  title: string;
+  eyebrow?: string;
+  products: Array<{ title: string; href: string; image: string }>;
+  emptyMessage?: string;
+};
+---
+
+<section class="space-y-6">
+  <div>
+    {eyebrow ? (
+      <div class="mb-1 text-[11px] font-bold uppercase tracking-[0.26em] text-[var(--site-blue)]">{eyebrow}</div>
+    ) : null}
+    <h2 class="site-section-title">{title}</h2>
+  </div>
+  {
+    products.length ? (
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {products.map((product) => (
+          <a href={product.href} class="card-link overflow-hidden">
+            <div class="aspect-square overflow-hidden bg-[#f3f5f8]">
+              {product.image ? (
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  class="h-full w-full object-cover transition duration-300 hover:scale-[1.03]"
+                  loading="lazy"
+                />
+              ) : null}
+            </div>
+            <div class="p-[18px] text-center">
+              <h3 class="text-[15px] font-bold text-[#0f3d73]">{product.title}</h3>
+              <span class="mt-[8px] inline-flex text-[12px] font-bold text-[var(--site-blue)]">View details</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p class="rounded border border-dashed border-[var(--site-line)] px-4 py-8 text-center text-sm text-slate-500">
+        {emptyMessage || "No products available."}
+      </p>
+    )
+  }
+</section>
