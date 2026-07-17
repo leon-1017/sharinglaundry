@@ -68,9 +68,9 @@ const latestProducts = getLatest("product", 8);
             <article class="grid grid-cols-[44px_1fr] gap-[15px]">
               <div class="blue-icon-dot">{index + 1}</div>
               <div>
-                <h3 class="text-[13px] font-bold text-[var(--site-blue)]">{reason}</h3>
+                <h3 class="text-[13px] font-bold text-[var(--site-blue)]">{reason.title}</h3>
                 <p class="mt-[8px] text-[12px] leading-[1.45] text-white/90">
-                  We provide focused support and dependable communication for commercial laundry project decisions.
+                  {reason.body}
                 </p>
               </div>
             </article>

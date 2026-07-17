@@ -3,7 +3,7 @@ export const homeContent = {
     title: "Your Professional Laundry Project Solution Expert",
     bullets: [
       "Provide high-quality, highly-efficient, energy-saving laundry equipment at the best price.",
-      "Sharing is your optimum partner if you are looking for more efficient and lower-cost equipment for your laundry business.",
+      "Sharing is your optimum partner if you are looking for more efficient and lower-cost equipment for your laundry business!",
     ],
     primaryHref: "/products/",
     primaryLabel: "See More Products",
@@ -53,28 +53,40 @@ export const homeContent = {
   highlights: [
     {
       title: "QUALITY",
-      body: "We use good quality spare parts for all laundry machines, and the service life is longer.",
+      body: "We use good quality spare parts for all laundry machines, and the using life will be longer.",
     },
     {
       title: "EXPERT",
-      body: "We have 20 years experience in laundry equipment and can provide practical project solutions.",
+      body: "We have 20 years experience in laundry equipment, can give you the professional solutions.",
     },
     {
       title: "PRICE",
-      body: "The pricing structure is tuned for lower project investment without giving up core machine capability.",
+      body: "The price of our laundry machines is better, will help you to save much investment cost for laundry business.",
     },
   ],
   intro: {
     title: "What We Do",
     body:
-      "Wuxi Sharing Machinery Co.,Ltd is located in East China, about 100km from Shanghai, and focuses on commercial and industrial laundry equipment including washer extractors, tumble dryers, flatwork ironers, folders, dry-cleaning machines, laundry presses and finishing equipment.",
+      "Wuxi Sharing Machinery Co.,Ltd located in East of China, 100km away from Shanghai, specializes in manufacturing and selling China best quality commercial and industrial laundry equipment, including washer extractor,tumble dryer,flatwork ironer, folder, dry cleaning machine, laundry pressing machine and finishing equipment, etc.",
     image: "/wp-assets/uploads/2024-Texcare-picture-1.jpg",
   },
   reasons: [
-    "Commercial and industrial laundry line coverage",
-    "Export-oriented project support",
-    "Factory-focused supply chain",
-    "Responsive inquiry handling",
+    {
+      title: "Expert Engineers",
+      body: "Trust our dedicated team of expert engineers to keep your laundry needs operating at peak performance.",
+    },
+    {
+      title: "Experience Skills",
+      body: "We pride ourselves on the experience and skills of our team, which allow us to deliver exceptional laundry services.",
+    },
+    {
+      title: "Guarantee Service",
+      body: "Our laundry services are backed by a satisfaction guarantee, so you can trust that we'll always deliver the best possible results.",
+    },
+    {
+      title: "Trusted Work",
+      body: "With experience in the laundry industry, we've earned a reputation for trusted work that you can depend on.",
+    },
   ],
   partnersTitle:
     "Our expert team specializes in commercial laundry solutions and garment industrial washing technologies.",
