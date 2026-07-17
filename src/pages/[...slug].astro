@@ -88,11 +88,36 @@ const productImages = [...new Set([entry.image, ...entry.images].filter(Boolean)
         </section>
 
         <section class="pixel-container pt-[28px]">
-          <div class="border-b border-[#d3d3d3]">
-            <button class="border border-b-0 border-[#d3d3d3] bg-white px-[22px] py-[12px] text-[14px] font-bold text-[#333]">Description</button>
-            <button class="ml-[4px] border border-b-0 border-[#d3d3d3] bg-[#f7f7f7] px-[22px] py-[12px] text-[14px] text-[#777]">Technical Parameters</button>
+          <div class="border-b border-[#d3d3d3]" data-product-tabs>
+            <button
+              type="button"
+              data-tab="description"
+              class="product-tab border border-b-0 border-[#d3d3d3] bg-white px-[22px] py-[12px] text-[14px] font-bold text-[#333]"
+            >
+              Description
+            </button>
+            {entry.techTableHtml ? (
+              <button
+                type="button"
+                data-tab="parameters"
+                class="product-tab ml-[4px] border border-b-0 border-[#d3d3d3] bg-[#f7f7f7] px-[22px] py-[12px] text-[14px] text-[#777]"
+              >
+                Technical Parameters
+              </button>
+            ) : null}
           </div>
-          <article class="content-prose border border-t-0 border-[#d3d3d3] px-[28px] py-[26px]" set:html={entry.contentHtml}></article>
+          <article
+            data-tab-panel="description"
+            class="content-prose border border-t-0 border-[#d3d3d3] px-[28px] py-[26px]"
+            set:html={entry.contentHtml}
+          />
+          {entry.techTableHtml ? (
+            <article
+              data-tab-panel="parameters"
+              class="content-prose hidden border border-t-0 border-[#d3d3d3] px-[28px] py-[26px]"
+              set:html={entry.techTableHtml}
+            />
+          ) : null}
         </section>
 
         <section class="pixel-container pt-[54px]">
@@ -156,3 +181,31 @@ const productImages = [...new Set([entry.image, ...entry.images].filter(Boolean)
     )
   }
 </MainLayout>
+
+<script>
+  // 产品页 Description / Technical Parameters 标签切换
+  document.querySelectorAll<HTMLElement>("[data-product-tabs]").forEach((tabBar) => {
+    const tabs = tabBar.querySelectorAll<HTMLButtonElement>(".product-tab");
+    const panels = tabBar.parentElement?.querySelectorAll<HTMLElement>("[data-tab-panel]");
+    if (!tabs.length || !panels?.length) return;
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.tab;
+        // 切换按钮样式
+        tabs.forEach((btn) => {
+          const isActive = btn === tab;
+          btn.classList.toggle("bg-white", isActive);
+          btn.classList.toggle("font-bold", isActive);
+          btn.classList.toggle("text-[#333]", isActive);
+          btn.classList.toggle("bg-[#f7f7f7]", !isActive);
+          btn.classList.toggle("text-[#777]", !isActive);
+        });
+        // 切换面板
+        panels.forEach((panel) => {
+          panel.classList.toggle("hidden", panel.dataset.tabPanel !== target);
+        });
+      });
+    });
+  });
+</script>

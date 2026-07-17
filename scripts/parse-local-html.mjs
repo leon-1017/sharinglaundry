@@ -201,10 +201,13 @@ function extractProductPage($) {
   }
 
   // Features tab（技术参数表）
+  // 部分产品使用 yikes-custom-woo-tab 插件的独立 "technical-parameters" tab
   let techTableHtml = "";
-  const featuresTab = $("#tab-features");
-  if (featuresTab.length) {
-    const table = featuresTab.find("table").first();
+  const featuresTabs = [
+    $("#tab-features").find("table").first(),
+    $("#tab-technical-parameters").find("table").first(),
+  ];
+  for (const table of featuresTabs) {
     if (table.length) {
       // 清理表格：移除内联样式，保留结构
       table.find("*").each((_, el) => {
@@ -220,6 +223,7 @@ function extractProductPage($) {
         }
       });
       techTableHtml = $.html(table);
+      break;
     }
   }
 

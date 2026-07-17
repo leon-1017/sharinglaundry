@@ -31,6 +31,8 @@ export interface SiteEntry {
   excerpt: string;
   contentHtml: string;
   plainText: string;
+  techTableHtml?: string;
+  listingProducts?: Array<{ title: string; href: string; image: string }>;
   sitemapSource: string;
 }
 
