@@ -11,7 +11,7 @@ const latestProducts = getLatest("product", 8);
 ---
 
 <MainLayout title="Home - Wuxi Sharing Machinery Co.,Ltd" description={home.description} image={home.image}>
-  <section class="relative overflow-hidden bg-[#0b1d33] pb-[90px] pt-[76px] text-white" data-reveal="fade">
+  <section class="section-lg relative overflow-hidden bg-[#0b1d33] text-white" data-reveal="fade">
     {homeContent.hero.image ? (
       <img
         src={homeContent.hero.image}
@@ -58,19 +58,19 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="pixel-container relative z-10 -mt-[56px] grid bg-white px-[35px] py-[42px] shadow-[0_26px_58px_rgba(0,0,0,0.18)] md:grid-cols-3" data-reveal="fade-up" data-reveal-delay="100">
+  <section class="section-sm pixel-container relative z-10 -mt-[56px] grid bg-white px-[35px] shadow-[0_26px_58px_rgba(0,0,0,0.18)] md:grid-cols-3" data-reveal="fade-up" data-reveal-delay="100">
     {homeContent.highlights.map((item, index) => (
       <article class={`px-[34px] text-center ${index === 1 ? "md:border-x md:border-[#eeeeee]" : ""}`}>
         <div class="mx-auto mb-[17px] flex h-[44px] w-[44px] items-center justify-center rounded-full text-[25px] font-black text-[var(--site-blue)]">
           {index === 0 ? "Q" : index === 1 ? "E" : "$"}
         </div>
-        <h2 class="text-[25px] font-bold uppercase text-[var(--site-blue)]">{item.title}</h2>
+        <h2 class="text-[25px] font-bold uppercase text-[var(--site-heading)]">{item.title}</h2>
         <p class="mt-[18px] text-left text-[12px] leading-[1.55] text-[#777]">{item.body}</p>
       </article>
     ))}
   </section>
 
-  <section class="pixel-container grid gap-[70px] py-[98px] md:grid-cols-[1fr_1.08fr] md:items-start" data-reveal="fade-up">
+  <section class="section-lg pixel-container grid gap-[70px] md:grid-cols-[1fr_1.08fr] md:items-start" data-reveal="fade-up">
     <div>
       <h2 class="site-section-title">What We Do</h2>
       <p class="mt-[32px] text-[13px] leading-[1.5] text-[#666]">{homeContent.intro.body}</p>
@@ -80,16 +80,16 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="bg-[var(--site-gray-band)] py-[78px] text-white" data-reveal="fade-up">
+  <section class="section-md bg-[var(--site-gray-band)] text-white" data-reveal="fade-up">
     <div class="pixel-container grid gap-[76px] md:grid-cols-[1fr_1fr]">
       <div>
-        <h2 class="site-section-title !text-[var(--site-blue)]">Why Choose Us</h2>
+        <h2 class="site-section-title">Why Choose Us</h2>
         <div class="mt-[42px] grid gap-x-[30px] gap-y-[34px] sm:grid-cols-2">
           {homeContent.reasons.map((reason, index) => (
             <article class="grid grid-cols-[44px_1fr] gap-[15px]">
               <div class="blue-icon-dot">{index + 1}</div>
               <div>
-                <h3 class="text-[13px] font-bold text-[var(--site-blue)]">{reason.title}</h3>
+                <h3 class="text-[13px] font-bold text-[var(--site-blue-dark)]">{reason.title}</h3>
                 <p class="mt-[8px] text-[12px] leading-[1.45] text-white/90">
                   {reason.body}
                 </p>
@@ -102,7 +102,7 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="py-[86px]" data-reveal="fade-up">
+  <section class="section-lg" data-reveal="fade-up">
     <div class="pixel-container text-center">
       <h2 class="site-section-title mx-auto w-fit text-center">Cooperative Partners</h2>
       <p class="mt-[34px] text-[12px] font-bold tracking-[0.24em] text-[var(--site-blue)]">
@@ -120,7 +120,7 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="bg-[#f2f2f2] py-[78px]" data-reveal="fade-up">
+  <section class="section-md bg-[#f2f2f2]" data-reveal="fade-up">
     <div class="pixel-container">
       <h2 class="site-section-title">Our Customer Say</h2>
       <div class="mt-[50px]">
@@ -143,7 +143,7 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="slanted-bg bg-white py-[82px] text-center" data-reveal="fade-up">
+  <section class="section-md slanted-bg bg-white text-center" data-reveal="fade-up">
     <div class="pixel-container">
       <div class="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--site-blue)]">{homeContent.hotline.eyebrow}</div>
       <div class="mt-[16px] text-[28px] font-bold text-[var(--site-blue)]">{homeContent.hotline.phone}</div>
@@ -153,7 +153,7 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="bg-[#f4f8fc] py-[70px]" data-reveal="fade-up">
+  <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
     <div class="pixel-container">
       <EntryGrid title="Products" entries={latestProducts.slice(0, 6)} />
     </div>

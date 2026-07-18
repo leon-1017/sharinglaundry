@@ -217,6 +217,18 @@ img {
   z-index: 1;
 }
 
+.section-sm {
+  padding-block: 56px;
+}
+
+.section-md {
+  padding-block: 72px;
+}
+
+.section-lg {
+  padding-block: 96px;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

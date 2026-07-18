@@ -27,6 +27,7 @@ const { entry } = Astro.props;
 const allProducts = getProductCollection();
 const isProduct = entry.kind === "product";
 const isContact = entry.path === "/contact-us/";
+const isRefund = entry.path === "/refund-and-returns-policy/";
 const isListing =
   entry.kind === "productCategory" ||
   entry.kind === "category" ||
@@ -95,7 +96,7 @@ const canonicalHref =
           </div>
 
           <div class="pt-[10px]">
-            <h1 class="text-[31px] font-normal leading-tight text-[#333]">{entry.title}</h1>
+            <h1 class="text-[31px] font-normal leading-tight text-[var(--site-heading)]">{entry.title}</h1>
             <div class="my-[26px] h-px bg-[#e5e5e5]"></div>
             <p class="text-[14px] leading-[1.7] text-[#777]">{entry.description}</p>
             <div class="mt-[22px] text-[13px] text-[#777]">
@@ -140,14 +141,14 @@ const canonicalHref =
         </section>
 
         <section class="pixel-container pt-[54px]" data-reveal="fade-up">
-          <h2 class="mb-[26px] text-[25px] font-normal text-[#333]">Related products</h2>
+          <h2 class="site-section-title mb-[26px]">Related products</h2>
           <div class="grid gap-[28px] sm:grid-cols-2 lg:grid-cols-4">
             {related.slice(0, 4).map((item) => (
               <a href={item.path} class="block text-center">
                 <div class="aspect-square border border-[#e5e5e5] bg-[#f5f5f5]">
                   {item.image ? <img src={item.image} alt={item.title} class="h-full w-full object-cover" /> : null}
                 </div>
-                <h3 class="mt-[14px] text-[14px] font-bold text-[var(--site-blue)]">{item.title}</h3>
+                <h3 class="mt-[14px] text-[14px] font-bold text-[var(--site-blue-dark)]">{item.title}</h3>
               </a>
             ))}
           </div>
@@ -165,16 +166,17 @@ const canonicalHref =
             <p class="mt-[24px] max-w-[720px] text-[15px] leading-[1.7] text-white/85">
               We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
             </p>
+            <a href="#inquiry-form" class="btn-primary mt-[30px]">Send Inquiry</a>
           </div>
         </section>
-        <section class="pixel-container py-[58px]" data-reveal="fade-up">
-          <h2 class="site-section-title !text-[var(--site-blue)]">Contact Details</h2>
+        <section class="section-md pixel-container" data-reveal="fade-up">
+          <h2 class="site-section-title">Contact Details</h2>
           <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
         </section>
-        <section class="bg-[var(--site-gray-band)] py-[72px]" data-reveal="fade-up">
+        <section id="inquiry-form" class="section-md bg-[var(--site-gray-band)]" data-reveal="fade-up">
           <div class="pixel-container grid gap-[60px] md:grid-cols-[0.9fr_1fr]">
             <div class="text-white">
-              <h2 class="site-section-title !text-[var(--site-blue)]">Contact us</h2>
+              <h2 class="site-section-title">Contact us</h2>
               <div class="mt-[34px] grid gap-[14px] text-[14px]">
                 <p>No.588, Nanhu Avenue, Wuxi City, China</p>
                 <p>+86-51066206136</p>
@@ -188,11 +190,11 @@ const canonicalHref =
       </main>
     ) : isListing ? (
       <main class="bg-white">
-        <section class="pixel-container py-[58px]" data-reveal="fade-up">
+        <section class="section-md pixel-container" data-reveal="fade-up">
           <h1 class="site-section-title">{entry.title}</h1>
           <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
         </section>
-        <section class="bg-[#f4f8fc] py-[62px]" data-reveal="fade-up">
+        <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
           <div class="pixel-container">
             {listingProducts ? (
               <ProductGrid
@@ -210,18 +212,19 @@ const canonicalHref =
       </main>
     ) : (
       <main>
-        <section class="pixel-container py-[58px]" data-reveal="fade-up">
+        <section class="section-md pixel-container" data-reveal="fade-up">
           <h1 class="site-section-title">{entry.title}</h1>
           {entry.datePublished ? <p class="mt-[22px] text-[13px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
           {entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
           <article class="content-prose mt-[34px]" set:html={entry.fallbackContent || entry.contentHtml}></article>
+          {isRefund ? <a href="/contact-us/" class="btn-primary mt-[30px]">Contact Sales</a> : null}
         </section>
         {entry.imageBoxCards && entry.imageBoxCards.length > 0 ? (
-          <section class="bg-[#f4f8fc] py-[62px]" data-reveal="fade-up">
+          <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
             <div class="pixel-container">
-              <h2 class="site-section-title !text-[#333]">Explore Our Applications</h2>
+              <h2 class="site-section-title">Explore Our Applications</h2>
               <div class="mt-[42px] grid gap-[28px] sm:grid-cols-2 lg:grid-cols-3">
                 {entry.imageBoxCards.map((card) => (
                   <a href={card.href} class="group block overflow-hidden bg-white shadow-sm transition hover:shadow-md">
@@ -229,7 +232,7 @@ const canonicalHref =
                       <img src={card.image} alt={card.title} class="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" />
                     </div>
                     <div class="px-[22px] py-[18px]">
-                      <h3 class="text-[18px] font-normal text-[var(--site-blue)] group-hover:underline">{card.title}</h3>
+                      <h3 class="text-[18px] font-normal text-[var(--site-blue-dark)] group-hover:underline">{card.title}</h3>
                     </div>
                   </a>
                 ))}
