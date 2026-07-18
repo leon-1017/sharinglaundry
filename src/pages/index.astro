@@ -74,8 +74,9 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="section-md bg-[var(--site-gray-band)] text-white" data-reveal="fade-up">
-    <div class="pixel-container grid gap-[76px] md:grid-cols-[1fr_1fr]">
+  <section class="section-md relative overflow-hidden bg-cover bg-center bg-no-repeat text-white" style="background-image: url('/wp-assets/uploads/img-bg-laundry.jpg');" data-reveal="fade-up">
+    <div class="absolute inset-0 bg-[#0b1d33]/80"></div>
+    <div class="pixel-container relative z-10 grid gap-[76px] md:grid-cols-[1fr_1fr]">
       <div>
         <h2 class="site-section-title">Why Choose Us</h2>
         <div class="mt-[42px] grid gap-x-[30px] gap-y-[34px] sm:grid-cols-2">
