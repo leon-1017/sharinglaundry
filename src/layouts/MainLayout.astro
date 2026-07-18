@@ -56,9 +56,12 @@ const ogImageUrl = image
         function updateHeader() {
           const header = document.querySelector('header');
           if (!header) return;
-          if (window.scrollY > 80) {
+          const y = window.scrollY;
+          const scrolled = header.classList.contains('is-scrolled');
+          // 使用 40px 滞后区间，避免在阈值附近反复切换
+          if (!scrolled && y > 80) {
             header.classList.add('is-scrolled');
-          } else {
+          } else if (scrolled && y < 40) {
             header.classList.remove('is-scrolled');
           }
         }
