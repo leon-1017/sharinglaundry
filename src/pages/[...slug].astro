@@ -28,6 +28,17 @@ const allProducts = getProductCollection();
 const isProduct = entry.kind === "product";
 const isContact = entry.path === "/contact-us/";
 const isRefund = entry.path === "/refund-and-returns-policy/";
+
+// 页面 hero 背景图映射
+const heroBgMap: Record<string, string> = {
+  "/about-us/": "/wp-assets/uploads/img-bg-laundry.jpg",
+  "/products/": "/wp-assets/uploads/img-bg-laundry.jpg",
+  "/news/": "/wp-assets/uploads/img-newsbanner.jpg",
+  "/support/": "/wp-assets/uploads/img-banner-support.jpg",
+  "/application/": "/wp-assets/uploads/img-bg-laundry.jpg",
+};
+const heroBg = heroBgMap[entry.path] || null;
+
 const isListing =
   entry.kind === "productCategory" ||
   entry.kind === "category" ||
@@ -258,9 +269,20 @@ const canonicalHref =
       </main>
     ) : isListing ? (
       <main class="bg-white">
+        {heroBg ? (
+          <section class="relative overflow-hidden bg-cover bg-center bg-no-repeat py-[90px] text-white" style={`background-image: url('${heroBg}');`} data-reveal="fade">
+            <div class="absolute inset-0 bg-[#0b1d33]/75"></div>
+            <div class="pixel-container relative z-10">
+              <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
+              <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+            </div>
+          </section>
+        ) : null}
         <section class="section-md pixel-container" data-reveal="fade-up">
-          <h1 class="site-section-title">{entry.title}</h1>
-          <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
+          {!heroBg ? <h1 class="site-section-title">{entry.title}</h1> : null}
+          <div class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
+            {entry.contentHtml ? <div set:html={entry.contentHtml}></div> : null}
+          </div>
         </section>
         <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
           <div class="pixel-container">
@@ -280,13 +302,24 @@ const canonicalHref =
       </main>
     ) : (
       <main>
+        {heroBg ? (
+          <section class="relative overflow-hidden bg-cover bg-center bg-no-repeat py-[90px] text-white" style={`background-image: url('${heroBg}');`} data-reveal="fade">
+            <div class="absolute inset-0 bg-[#0b1d33]/75"></div>
+            <div class="pixel-container relative z-10">
+              <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
+              <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+            </div>
+          </section>
+        ) : null}
         <section class="section-md pixel-container" data-reveal="fade-up">
-          <h1 class="site-section-title">{entry.title}</h1>
+          {!heroBg ? <h1 class="site-section-title">{entry.title}</h1> : null}
           {entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
           {entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
-          <article class="content-prose mt-[34px]" set:html={entry.fallbackContent || entry.contentHtml}></article>
+          <article class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
+            <div set:html={entry.fallbackContent || entry.contentHtml}></div>
+          </article>
           {isRefund ? <a href="/contact-us/" class="btn-primary mt-[30px]">Contact Sales</a> : null}
         </section>
         {entry.imageBoxCards && entry.imageBoxCards.length > 0 ? (
