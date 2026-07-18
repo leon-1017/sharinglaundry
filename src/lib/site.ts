@@ -138,11 +138,12 @@ const imageOverrides: Record<string, string[]> = {
   ],
   "product-roller-flatwork-ironer": ["/wp-assets/uploads/Flatwork-Ironer-1-600x600.jpg"],
   "product-chest-flatwork-ironer": ["/wp-assets/uploads/Chest-Flatwork-Ironer-1-600x600.jpg"],
-  "page-about-us": ["/wp-assets/uploads/2024-Texcare-picture-1.jpg"],
-  "page-contact-us": ["/wp-assets/uploads/img-bg-contact.jpg"],
-  "page-support": ["/wp-assets/uploads/img-banner-support.jpg"],
-  "page-news": ["/wp-assets/uploads/img-newsbanner.jpg"],
-  "page-application": ["/wp-assets/uploads/img-bg-laundry.jpg"],
+  "about-us": ["/wp-assets/uploads/2024-Texcare-picture-1.jpg"],
+  "contact-us": ["/wp-assets/uploads/img-bg-contact.jpg"],
+  "support": ["/wp-assets/uploads/img-banner-support.jpg"],
+  "news": ["/wp-assets/uploads/img-newsbanner.jpg"],
+  "application": ["/wp-assets/uploads/img-bg-laundry.jpg"],
+  "refund-and-returns-policy": ["/wp-assets/uploads/img-bg-laundry.jpg"],
 };
 
 function normalizeSourceUrl(raw: string) {

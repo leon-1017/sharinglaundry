@@ -169,6 +169,38 @@ function makeExcerpt(html, maxLen = 220) {
   return text.length > maxLen ? text.slice(0, maxLen) + "..." : text;
 }
 
+/**
+ * 移除 contentHtml 起始处最近的 h1，避免与模板里的 <h1>{title}</h1> 重复。
+ * 触发条件：起始 h1 的文本与 entry.title 匹配，或匹配 "Category: X" 形式
+ */
+function stripLeadingH1(html, title) {
+  if (!html) return html;
+  const $ = cheerio.load(`<div id="__root__">${html}</div>`, null, false);
+  const $root = $("#__root__");
+  // 找到起始处最近的 h1（仅前 200 字符范围内）
+  const head = $root.html()?.slice(0, 400) || "";
+  const firstH1Match = head.match(/<h1\b[\s\S]*?<\/h1>/i);
+  if (!firstH1Match) return html;
+  // 用 cheerio 解析
+  const $inner = cheerio.load(firstH1Match[0], null, false);
+  const innerTextRaw = $inner.root().text();
+  const innerText = innerTextRaw
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const normalizedTitle = (title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+  const shouldRemove =
+    innerText === normalizedTitle ||
+    /^category\s*:/i.test(innerTextRaw) ||
+    (innerText.endsWith("archives") &&
+      innerText.replace(/\s+archives$/, "") ===
+        normalizedTitle.replace(/\s+archives$/, ""));
+
+  if (!shouldRemove) return html;
+  return html.replace(firstH1Match[0], "");
+}
+
 /* ── 产品页提取 ────────────────────────────────────────── */
 
 function extractProductPage($) {
@@ -235,6 +267,8 @@ function extractProductPage($) {
 function extractElementorContent($) {
   const parts = [];
   const images = [];
+  const imageBoxCards = [];
+  let h1Skipped = false;
 
   // 查找主内容区
   const mainContainer =
@@ -244,7 +278,7 @@ function extractElementorContent($) {
         ? $("main#main").first()
         : $("main").first();
 
-  if (!mainContainer.length) return { contentHtml: "", images };
+  if (!mainContainer.length) return { contentHtml: "", images, imageBoxCards };
 
   // 按文档顺序遍历所有 Elementor widget
   mainContainer.find(".elementor-widget").each((_, widget) => {
@@ -260,11 +294,13 @@ function extractElementorContent($) {
       return;
 
     if (cls.includes("elementor-widget-text-editor")) {
-      const html = $w
-        .find(".elementor-widget-container")
-        .html()
-        ?.trim();
+      const raw = $w.find(".elementor-widget-container").html() || "";
+      let html = raw.trim();
       if (html) {
+        // 如果 text-editor 内容未包裹在 <p> 中（Elementor 经常输出纯文本），自动包裹
+        if (!/^\s*<\s*(p|div|h[1-6]|ul|ol|table|blockquote|figure|hr|iframe)/i.test(html)) {
+          html = `<p>${html}</p>`;
+        }
         parts.push(html);
         // 收集图片
         $w.find("img").each((_, el) => {
@@ -280,7 +316,31 @@ function extractElementorContent($) {
       if ($title.length) {
         const text = $title.text().trim();
         const tag = $title.get(0)?.tagName?.toLowerCase() || "h2";
-        if (text) parts.push(`<${tag}>${text}</${tag}>`);
+        // 跳过第一个 h1（页面主标题由模板渲染），避免重复
+        if (tag === "h1" && !h1Skipped) {
+          h1Skipped = true;
+        } else if (text) {
+          parts.push(`<${tag}>${text}</${tag}>`);
+        }
+      }
+    } else if (cls.includes("elementor-widget-image-box")) {
+      const $figure = $w.find(".elementor-image-box-img img").first();
+      const $link = $w.find(".elementor-image-box-title a").first();
+      const $title = $w.find(".elementor-image-box-title").first();
+      if ($figure.length) {
+        const src = $figure.attr("src") || $figure.attr("data-src");
+        const local = src ? rewriteAssetUrl(src) : null;
+        const titleText = $title.text().trim();
+        const linkHref =
+          rewriteInternalUrl($link.attr("href")) || $link.attr("href") || "#";
+        if (local) {
+          if (!images.includes(local)) images.push(local);
+          imageBoxCards.push({
+            title: titleText,
+            href: linkHref,
+            image: local,
+          });
+        }
       }
     } else if (cls.includes("elementor-widget-image")) {
       $w.find("img").each((_, el) => {
@@ -390,7 +450,7 @@ function extractElementorContent($) {
   }
 
   const contentHtml = parts.join("\n\n").replace(/\n{3,}/g, "\n\n").trim();
-  return { contentHtml, images };
+  return { contentHtml, images, imageBoxCards };
 }
 
 /* ── 列表页（WooCommerce 产品列表）提取 ───────────────── */
@@ -419,6 +479,67 @@ function extractListingProducts($) {
 }
 
 /* ── 主流程 ────────────────────────────────────────────── */
+
+/**
+ * 为部分页面补回退内容 / 修正 Hero 图。
+ * 这些页面的源 HTML 内容空洞或缺少合适的预览图。
+ */
+function applyPageOverrides(entry) {
+  // refund-and-returns-policy: 源站内容仅 h1，回退为标准退款政策
+  if (entry.path === "/refund-and-returns-policy/") {
+    entry.fallbackContent = `<p>Thank you for shopping at Wuxi Sharing Machinery Co., Ltd. We want you to be completely satisfied with your purchase of commercial and industrial laundry equipment. Please review our refund and return policy below.</p>
+
+<h2>Eligibility for Returns</h2>
+<p>Due to the nature of commercial laundry equipment, most items are manufactured to order or shipped directly from our factory. Returns are accepted only under the following conditions:</p>
+<ul>
+  <li>The item is defective on arrival (DOA) or damaged in transit.</li>
+  <li>The item is materially different from the specifications listed in the signed sales contract or quotation.</li>
+  <li>A return authorization (RMA) is issued by our after-sales team within 7 days of delivery.</li>
+</ul>
+
+<h2>Non-Returnable Items</h2>
+<ul>
+  <li>Custom-built machines produced to your specifications.</li>
+  <li>Items that have been installed, used, or modified after delivery.</li>
+  <li>Consumables, spare parts, and accessories that have been opened.</li>
+  <li>Items returned without original packaging, manuals, or accessories.</li>
+</ul>
+
+<h2>Return Process</h2>
+<ol>
+  <li>Contact our after-sales team at <a href="mailto:info@sharinglaundry.com">info@sharinglaundry.com</a> or call +86-51066206136 within 7 days of receiving your order.</li>
+  <li>Provide your order number, the reason for return, and photos / videos of the issue.</li>
+  <li>Once your RMA is approved, we will share return shipping instructions.</li>
+  <li>After our engineers inspect the item, we will arrange a replacement, repair, or refund as appropriate.</li>
+</ol>
+
+<h2>Refunds</h2>
+<p>Approved refunds are credited back to the original payment method within 10–20 business days after we receive and inspect the returned item. Shipping, customs duties, and installation costs are non-refundable unless the return is due to our error.</p>
+
+<h2>Damaged or Defective on Arrival</h2>
+<p>If your equipment arrives damaged or defective, please refuse the delivery or contact us within 48 hours. We will arrange a free replacement part or a brand-new unit, along with compensation for any reasonable repair costs.</p>
+
+<h2>Contact Us</h2>
+<p>If you have any questions about your order, our refund policy, or your warranty coverage, please reach out to us at <a href="mailto:info@sharinglaundry.com">info@sharinglaundry.com</a>. Our after-sales team is available Monday to Saturday, 09:00–18:00 (Beijing time).</p>`;
+    if (!entry.image || /250X100|site-logo/i.test(entry.image)) {
+      entry.image = "/wp-assets/uploads/img-bg-laundry.jpg";
+    }
+  }
+
+  // contact-us: 源站 Hero 仅为 logo，改为 contact 背景图
+  if (entry.path === "/contact-us/") {
+    if (!entry.image || /250X100|site-logo/i.test(entry.image)) {
+      entry.image = "/wp-assets/uploads/img-bg-contact.jpg";
+    }
+  }
+
+  // application: 源站首图为 logo，改为第一张 image-box 图
+  if (entry.path === "/application/") {
+    if (entry.imageBoxCards && entry.imageBoxCards.length > 0) {
+      entry.image = entry.imageBoxCards[0].image;
+    }
+  }
+}
 
 async function main() {
   const manifest = JSON.parse(await readFile(MANIFEST_PATH, "utf8"));
@@ -451,6 +572,7 @@ async function main() {
     let contentHtml = "";
     let techTableHtml = "";
     let listingProducts = [];
+    let imageBoxCards = [];
     let images = allImages;
 
     if (kind === "product") {
@@ -464,6 +586,7 @@ async function main() {
     } else {
       const result = extractElementorContent($);
       contentHtml = result.contentHtml;
+      imageBoxCards = result.imageBoxCards;
       images = result.images.length ? result.images : allImages;
       // 列表页提取产品卡片
       if (
@@ -500,10 +623,21 @@ async function main() {
       entry.techTableHtml = techTableHtml;
     }
 
+    // 为包含 image-box 组件的页面添加 cards
+    if (imageBoxCards.length) {
+      entry.imageBoxCards = imageBoxCards;
+    }
+
     // 为列表页添加产品卡片数据
     if (listingProducts.length) {
       entry.listingProducts = listingProducts;
     }
+
+    // 移除 contentHtml 起始处的 h1（避免与模板 <h1> 重复）
+    entry.contentHtml = stripLeadingH1(contentHtml, title);
+
+    // 按路径补一些回退/覆盖（源站空白或 Hero 图缺位）
+    applyPageOverrides(entry);
 
     entries.push(entry);
   }

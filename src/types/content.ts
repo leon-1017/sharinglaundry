@@ -33,6 +33,8 @@ export interface SiteEntry {
   plainText: string;
   techTableHtml?: string;
   listingProducts?: Array<{ title: string; href: string; image: string }>;
+  imageBoxCards?: Array<{ title: string; href: string; image: string }>;
+  fallbackContent?: string;
   sitemapSource: string;
 }
 

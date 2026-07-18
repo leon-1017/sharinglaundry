@@ -155,8 +155,20 @@ const canonicalHref =
       </main>
     ) : isContact ? (
       <main>
+        <section class="relative overflow-hidden bg-[#0f2440] py-[110px] text-white">
+          {entry.image ? (
+            <img src={entry.image} alt={entry.title} class="absolute inset-0 h-full w-full object-cover opacity-60" />
+          ) : null}
+          <div class="pixel-container relative">
+            <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
+            <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+            <p class="mt-[24px] max-w-[720px] text-[15px] leading-[1.7] text-white/85">
+              We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
+            </p>
+          </div>
+        </section>
         <section class="pixel-container py-[58px]">
-          <h1 class="site-section-title">{entry.title}</h1>
+          <h2 class="site-section-title !text-[var(--site-blue)]">Contact Details</h2>
           <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
         </section>
         <section class="bg-[var(--site-gray-band)] py-[72px]">
@@ -201,11 +213,30 @@ const canonicalHref =
         <section class="pixel-container py-[58px]">
           <h1 class="site-section-title">{entry.title}</h1>
           {entry.datePublished ? <p class="mt-[22px] text-[13px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
-          {entry.image ? (
+          {entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
-          <article class="content-prose mt-[34px]" set:html={entry.contentHtml}></article>
+          <article class="content-prose mt-[34px]" set:html={entry.fallbackContent || entry.contentHtml}></article>
         </section>
+        {entry.imageBoxCards && entry.imageBoxCards.length > 0 ? (
+          <section class="bg-[#f4f8fc] py-[62px]">
+            <div class="pixel-container">
+              <h2 class="site-section-title !text-[#333]">Explore Our Applications</h2>
+              <div class="mt-[42px] grid gap-[28px] sm:grid-cols-2 lg:grid-cols-3">
+                {entry.imageBoxCards.map((card) => (
+                  <a href={card.href} class="group block overflow-hidden bg-white shadow-sm transition hover:shadow-md">
+                    <div class="aspect-[10/6.5] w-full overflow-hidden bg-[#f1f1f1]">
+                      <img src={card.image} alt={card.title} class="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" />
+                    </div>
+                    <div class="px-[22px] py-[18px]">
+                      <h3 class="text-[18px] font-normal text-[var(--site-blue)] group-hover:underline">{card.title}</h3>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
       </main>
     )
   }
