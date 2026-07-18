@@ -1,0 +1,39 @@
+---
+---
+
+<button
+  type="button"
+  aria-label="Back to top"
+  class="back-to-top fixed bottom-6 right-6 z-50 flex h-12 w-12 translate-y-20 items-center justify-center rounded-full bg-[var(--site-blue)] text-white opacity-0 shadow-lg transition-all duration-300 hover:bg-[var(--site-blue-dark)] focus:outline-none"
+  data-back-to-top
+>
+  <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+  </svg>
+</button>
+
+<script>
+  (function () {
+    const button = document.querySelector("[data-back-to-top]");
+    if (!(button instanceof HTMLElement)) return;
+
+    function toggle() {
+      const show = window.scrollY > 500;
+      button.classList.toggle("is-visible", show);
+    }
+
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
+  })();
+</script>
+
+<style>
+  .back-to-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

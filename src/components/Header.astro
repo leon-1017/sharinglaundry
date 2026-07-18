@@ -39,30 +39,63 @@ import { mainNavigation } from "../data/navigation";
     </nav>
   </div>
 
-  <details class="border-t border-[#efefef] lg:hidden">
-    <summary class="pixel-container cursor-pointer list-none py-3 text-[12px] font-semibold uppercase text-[#777]">
-      Menu
-    </summary>
-    <div class="pixel-container grid gap-2 pb-4">
-      {
-        mainNavigation.map((item) => (
-          <div class="border border-[#e7e7e7]">
-            <a href={item.href} class="block px-4 py-3 text-[12px] font-semibold uppercase text-[#777]">{item.label}</a>
-            {item.children ? (
-              <div class="grid gap-px border-t border-[#e7e7e7] bg-[#e7e7e7]">
-                {item.children.map((child) => (
-                  <a href={child.href} class="bg-white px-4 py-2 text-[12px] text-[#777]">
-                    {child.label}
-                  </a>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        ))
-      }
+  <button type="button" aria-label="Toggle menu" aria-expanded="false" class="mobile-menu-btn absolute right-[17px] top-[42px] z-50 flex h-10 w-10 flex-col items-center justify-center gap-[5px] lg:hidden">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <div class="mobile-overlay fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300 lg:hidden" aria-hidden="true"></div>
+
+  <nav class="mobile-drawer fixed inset-y-0 right-0 z-50 w-[80%] max-w-[320px] translate-x-full bg-white shadow-2xl transition-transform duration-300 lg:hidden">
+    <div class="h-full overflow-y-auto px-6 pb-6 pt-[130px]">
+      <div class="mobile-menu grid gap-1">
+        {
+          mainNavigation.map((item) => (
+            <div class="border-b border-[#e7e7e7]">
+              <a href={item.href} class="block py-3 text-[14px] font-semibold uppercase text-[#777]">{item.label}</a>
+              {item.children ? (
+                <div class="mb-2 ml-3 grid gap-0 border-l-2 border-[#e7e7e7] pl-3">
+                  {item.children.map((child) => (
+                    <a href={child.href} class="block py-2 text-[13px] text-[#777]">
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ))
+        }
+      </div>
     </div>
-  </details>
+  </nav>
 </header>
+
+<script>
+  (function () {
+    const btn = document.querySelector(".mobile-menu-btn");
+    const drawer = document.querySelector(".mobile-drawer");
+    const overlay = document.querySelector(".mobile-overlay");
+    if (!btn || !drawer || !overlay) return;
+
+    function setOpen(open) {
+      btn.setAttribute("aria-expanded", String(open));
+      drawer.classList.toggle("is-open", open);
+      overlay.classList.toggle("is-open", open);
+      document.body.classList.toggle("overflow-hidden", open);
+    }
+
+    btn.addEventListener("click", () => {
+      setOpen(!drawer.classList.contains("is-open"));
+    });
+
+    overlay.addEventListener("click", () => setOpen(false));
+
+    document.querySelectorAll(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+  })();
+</script>
 
 <style>
   header.is-scrolled {
@@ -76,6 +109,34 @@ import { mainNavigation } from "../data/navigation";
 
   header.is-scrolled img {
     width: 140px;
+  }
+
+  .hamburger-line {
+    display: block;
+    height: 2px;
+    width: 22px;
+    background: #777;
+    transition: transform 250ms ease, opacity 250ms ease;
+  }
+
+  .mobile-menu-btn.is-open .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu-btn.is-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.is-open .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-drawer.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-overlay.is-open {
+    opacity: 1;
   }
 
   @media (max-width: 1023px) {

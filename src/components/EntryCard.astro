@@ -4,11 +4,11 @@ import type { SiteEntry } from "../types/content";
 const { entry, eyebrow } = Astro.props as { entry: SiteEntry; eyebrow?: string };
 ---
 
-<a href={entry.path} class="card-link overflow-hidden">
+<a href={entry.path} class="card-link group overflow-hidden">
   {
     entry.image ? (
       <div class="aspect-[4/3] overflow-hidden bg-[#f3f5f8]">
-        <img src={entry.image} alt={entry.title} class="h-full w-full object-cover transition duration-300 hover:scale-[1.03]" loading="lazy" />
+        <img src={entry.image} alt={entry.title} class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
       </div>
     ) : null
   }

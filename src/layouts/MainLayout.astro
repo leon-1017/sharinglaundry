@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
+import BackToTop from "../components/BackToTop.astro";
 import "../styles/global.css";
 
 const {
@@ -36,6 +37,7 @@ const canonicalUrl = canonical
     <slot />
     <Footer />
     <ScrollReveal />
+    <BackToTop />
     <script is:inline>
       (function () {
         function updateHeader() {
