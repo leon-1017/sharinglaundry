@@ -2,8 +2,8 @@
 import { mainNavigation } from "../data/navigation";
 ---
 
-<header class="sticky top-0 z-40 bg-white">
-  <div class="pixel-container flex h-[126px] items-start justify-between pt-[31px]">
+<header class="sticky top-0 z-40 bg-white transition-[height,box-shadow] duration-300 ease-out">
+  <div class="pixel-container flex h-[126px] items-start justify-between pt-[31px] transition-all duration-300">
     <a href="/" class="flex w-[170px] items-center pt-0">
       <img src="/wp-assets/uploads/250X100.png" alt="Wuxi Sharing Machinery Co.,Ltd" class="h-auto w-full" />
     </a>
@@ -63,3 +63,29 @@ import { mainNavigation } from "../data/navigation";
     </div>
   </details>
 </header>
+
+<style>
+  header.is-scrolled {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  header.is-scrolled > div:first-child {
+    height: 80px;
+    padding-top: 14px;
+  }
+
+  header.is-scrolled img {
+    width: 140px;
+  }
+
+  @media (max-width: 1023px) {
+    header.is-scrolled > div:first-child {
+      height: 64px;
+      padding-top: 10px;
+    }
+
+    header.is-scrolled img {
+      width: 120px;
+    }
+  }
+</style>

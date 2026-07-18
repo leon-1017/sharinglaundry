@@ -76,7 +76,7 @@ const canonicalHref =
           <span>{entry.title}</span>
         </nav>
 
-        <section class="pixel-container grid gap-[48px] py-[28px] md:grid-cols-[520px_1fr]">
+        <section class="pixel-container grid gap-[48px] py-[28px] md:grid-cols-[520px_1fr]" data-reveal="fade-up">
           <div>
             <div class="border border-[#e5e5e5] bg-white p-[12px]">
               {entry.image ? (
@@ -106,7 +106,7 @@ const canonicalHref =
           </div>
         </section>
 
-        <section class="pixel-container pt-[28px]">
+        <section class="pixel-container pt-[28px]" data-reveal="fade-up" data-reveal-delay="100">
           <div class="border-b border-[#d3d3d3]" data-product-tabs>
             <button
               type="button"
@@ -139,7 +139,7 @@ const canonicalHref =
           ) : null}
         </section>
 
-        <section class="pixel-container pt-[54px]">
+        <section class="pixel-container pt-[54px]" data-reveal="fade-up">
           <h2 class="mb-[26px] text-[25px] font-normal text-[#333]">Related products</h2>
           <div class="grid gap-[28px] sm:grid-cols-2 lg:grid-cols-4">
             {related.slice(0, 4).map((item) => (
@@ -155,7 +155,7 @@ const canonicalHref =
       </main>
     ) : isContact ? (
       <main>
-        <section class="relative overflow-hidden bg-[#0f2440] py-[110px] text-white">
+        <section class="relative overflow-hidden bg-[#0f2440] py-[110px] text-white" data-reveal="fade">
           {entry.image ? (
             <img src={entry.image} alt={entry.title} class="absolute inset-0 h-full w-full object-cover opacity-60" />
           ) : null}
@@ -167,11 +167,11 @@ const canonicalHref =
             </p>
           </div>
         </section>
-        <section class="pixel-container py-[58px]">
+        <section class="pixel-container py-[58px]" data-reveal="fade-up">
           <h2 class="site-section-title !text-[var(--site-blue)]">Contact Details</h2>
           <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
         </section>
-        <section class="bg-[var(--site-gray-band)] py-[72px]">
+        <section class="bg-[var(--site-gray-band)] py-[72px]" data-reveal="fade-up">
           <div class="pixel-container grid gap-[60px] md:grid-cols-[0.9fr_1fr]">
             <div class="text-white">
               <h2 class="site-section-title !text-[var(--site-blue)]">Contact us</h2>
@@ -188,11 +188,11 @@ const canonicalHref =
       </main>
     ) : isListing ? (
       <main class="bg-white">
-        <section class="pixel-container py-[58px]">
+        <section class="pixel-container py-[58px]" data-reveal="fade-up">
           <h1 class="site-section-title">{entry.title}</h1>
           <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
         </section>
-        <section class="bg-[#f4f8fc] py-[62px]">
+        <section class="bg-[#f4f8fc] py-[62px]" data-reveal="fade-up">
           <div class="pixel-container">
             {listingProducts ? (
               <ProductGrid
@@ -210,7 +210,7 @@ const canonicalHref =
       </main>
     ) : (
       <main>
-        <section class="pixel-container py-[58px]">
+        <section class="pixel-container py-[58px]" data-reveal="fade-up">
           <h1 class="site-section-title">{entry.title}</h1>
           {entry.datePublished ? <p class="mt-[22px] text-[13px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
           {entry.image && !entry.imageBoxCards?.length ? (
@@ -219,7 +219,7 @@ const canonicalHref =
           <article class="content-prose mt-[34px]" set:html={entry.fallbackContent || entry.contentHtml}></article>
         </section>
         {entry.imageBoxCards && entry.imageBoxCards.length > 0 ? (
-          <section class="bg-[#f4f8fc] py-[62px]">
+          <section class="bg-[#f4f8fc] py-[62px]" data-reveal="fade-up">
             <div class="pixel-container">
               <h2 class="site-section-title !text-[#333]">Explore Our Applications</h2>
               <div class="mt-[42px] grid gap-[28px] sm:grid-cols-2 lg:grid-cols-3">
