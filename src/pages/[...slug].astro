@@ -137,7 +137,7 @@ const canonicalHref =
   {
     isProduct ? (
       <main class="pb-[60px]">
-        <nav class="pixel-container py-[18px] text-[13px] text-[#777]">
+        <nav class="pixel-container py-[18px] text-[14px] text-[#777]">
           <a href="/" class="hover:text-[var(--site-blue)]">Home</a>
           <span class="px-2">/</span>
           <a href={productCategory?.href} class="hover:text-[var(--site-blue)]">{productCategory?.label}</a>
@@ -166,8 +166,8 @@ const canonicalHref =
           <div class="pt-[10px]">
             <h1 class="text-[31px] font-normal leading-tight text-[var(--site-heading)]">{entry.title}</h1>
             <div class="my-[26px] h-px bg-[#e5e5e5]"></div>
-            <p class="text-[14px] leading-[1.7] text-[#777]">{entry.description}</p>
-            <div class="mt-[22px] text-[13px] text-[#777]">
+            <p class="text-[15px] leading-[1.7] text-[#777]">{entry.description}</p>
+            <div class="mt-[22px] text-[14px] text-[#777]">
               <span>Category: </span>
               <a href={productCategory?.href} class="text-[var(--site-blue)]">{productCategory?.label}</a>
             </div>
@@ -245,7 +245,7 @@ const canonicalHref =
           <div class="pixel-container grid gap-[60px] md:grid-cols-[0.9fr_1fr]">
             <div class="text-white">
               <h2 class="site-section-title">Contact us</h2>
-              <div class="mt-[34px] grid gap-[14px] text-[14px]">
+              <div class="mt-[34px] grid gap-[14px] text-[15px]">
                 <p>No.588, Nanhu Avenue, Wuxi City, China</p>
                 <p>+86-51066206136</p>
                 <p>+86-13606196136</p>
@@ -282,7 +282,7 @@ const canonicalHref =
       <main>
         <section class="section-md pixel-container" data-reveal="fade-up">
           <h1 class="site-section-title">{entry.title}</h1>
-          {entry.datePublished ? <p class="mt-[22px] text-[13px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
+          {entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
           {entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}

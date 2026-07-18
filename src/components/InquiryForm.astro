@@ -5,20 +5,20 @@ const compact = Astro.props.compact ?? false;
 <section class:list={["bg-transparent", compact ? "" : ""]}>
   <div class="mb-[25px]">
     <h2 class="mb-[18px] text-[22px] font-bold leading-none text-[var(--site-blue)]">Request an Offer</h2>
-    <p class="max-w-[430px] text-[13px] leading-[1.45] text-white/90 md:text-[#f5f5f5]">To get started, please fill out the contact form below. Our team will respond to your inquiry as soon as possible.</p>
+    <p class="max-w-[430px] text-[14px] leading-[1.6] text-white/90 md:text-[#f5f5f5]">To get started, please fill out the contact form below. Our team will respond to your inquiry as soon as possible.</p>
   </div>
 
   <form class="grid gap-[11px]" data-inquiry-form>
-    <input name="name" placeholder="Name" class="h-[31px] w-full border-0 bg-white px-3 text-[12px] text-[#777] outline-none" />
-    <input name="email" type="email" placeholder="Email" class="h-[31px] w-full border-0 bg-white px-3 text-[12px] text-[#777] outline-none" />
-    <textarea name="message" placeholder="Message" rows="5" class="h-[83px] w-full resize-none border-0 bg-white px-3 py-2 text-[12px] text-[#777] outline-none"></textarea>
+    <input name="name" placeholder="Name" class="h-[35px] w-full border-0 bg-white px-3 text-[14px] text-[#777] outline-none" />
+    <input name="email" type="email" placeholder="Email" class="h-[35px] w-full border-0 bg-white px-3 text-[14px] text-[#777] outline-none" />
+    <textarea name="message" placeholder="Message" rows="5" class="h-[83px] w-full resize-none border-0 bg-white px-3 py-2 text-[14px] text-[#777] outline-none"></textarea>
     <button type="submit" class="btn-primary">Send</button>
-    <p class="text-[12px] leading-[1.45] text-white/80">
+    <p class="text-[13px] leading-[1.55] text-white/80">
       We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
     </p>
 
-    <p class="hidden bg-emerald-50 px-3 py-2 text-[12px] text-emerald-700" data-inquiry-success></p>
-    <p class="hidden bg-rose-50 px-3 py-2 text-[12px] text-rose-700" data-inquiry-error></p>
+    <p class="hidden bg-emerald-50 px-3 py-2 text-[13px] text-emerald-700" data-inquiry-success></p>
+    <p class="hidden bg-rose-50 px-3 py-2 text-[13px] text-rose-700" data-inquiry-error></p>
   </form>
 </section>
 
