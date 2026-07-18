@@ -33,22 +33,19 @@ const latestProducts = getLatest("product", 8);
         <a href={homeContent.hero.primaryHref} class="btn-primary">
           {homeContent.hero.primaryLabel} <span class="text-[13px]">&gt;</span>
         </a>
-        <a href={homeContent.hero.secondaryHref} class="btn-secondary border-white text-white hover:bg-white hover:text-[var(--site-blue)]">
-          {homeContent.hero.secondaryLabel}
-        </a>
       </div>
 
-      <div class="mx-auto mt-[42px] grid max-w-[760px] grid-cols-2 gap-x-[34px] gap-y-[28px] sm:grid-cols-4">
+      <div class="mx-auto mt-[42px] grid max-w-[840px] grid-cols-2 gap-x-[34px] gap-y-[28px] sm:grid-cols-4">
         {homeContent.showcaseItems.map((item) => (
           <a href={item.href} class="group text-center">
-            <div class="relative mx-auto h-[138px] w-[138px] overflow-hidden rounded-full bg-[#d8d8d8] shadow-[0_2px_4px_rgba(0,0,0,0.16)]">
+            <div class="relative mx-auto h-[160px] w-[160px] overflow-hidden rounded-full bg-[#d8d8d8] shadow-[0_2px_4px_rgba(0,0,0,0.16)]">
               <img
                 src={item.image}
                 alt={item.title}
                 class="h-full w-full object-cover grayscale transition duration-300 group-hover:grayscale-0"
               />
-              <div class="absolute inset-x-0 bottom-0 h-[48px] rounded-t-[80%] bg-[var(--site-blue)]"></div>
-              <div class="showcase-label absolute inset-x-2 bottom-[16px] truncate text-[13px] font-bold text-white">
+              <div class="absolute inset-x-0 bottom-0 h-[52px] rounded-t-[80%] bg-[var(--site-blue)]"></div>
+              <div class="showcase-label absolute inset-x-2 bottom-[18px] truncate text-[13px] font-bold text-white">
                 {item.title}
               </div>
             </div>
@@ -61,9 +58,6 @@ const latestProducts = getLatest("product", 8);
   <section class="section-sm pixel-container relative z-10 -mt-[56px] grid bg-white px-[35px] shadow-[0_26px_58px_rgba(0,0,0,0.18)] md:grid-cols-3" data-reveal="fade-up" data-reveal-delay="100">
     {homeContent.highlights.map((item, index) => (
       <article class={`px-[34px] text-center ${index === 1 ? "md:border-x md:border-[#eeeeee]" : ""}`}>
-        <div class="mx-auto mb-[17px] flex h-[44px] w-[44px] items-center justify-center rounded-full text-[25px] font-black text-[var(--site-blue)]">
-          {index === 0 ? "Q" : index === 1 ? "E" : "$"}
-        </div>
         <h2 class="text-[25px] font-bold uppercase text-[var(--site-heading)]">{item.title}</h2>
         <p class="mt-[18px] text-left text-[14px] leading-[1.6] text-[#777]">{item.body}</p>
       </article>
