@@ -5,8 +5,11 @@ export const homeContent = {
       "Provide high-quality, highly-efficient, energy-saving laundry equipment at the best price.",
       "Sharing is your optimum partner if you are looking for more efficient and lower-cost equipment for your laundry business!",
     ],
+    image: "/wp-assets/uploads/2024-Texcare-picture-1.jpg",
     primaryHref: "/products/",
     primaryLabel: "See More Products",
+    secondaryHref: "/contact-us/",
+    secondaryLabel: "Contact Us",
   },
   showcaseItems: [
     {

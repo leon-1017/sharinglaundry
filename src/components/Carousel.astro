@@ -1,0 +1,154 @@
+---
+interface Props {
+  id: string;
+  autoplay?: number;
+  itemsPerView?: number;
+  itemsPerViewTablet?: number;
+  itemsPerViewMobile?: number;
+  gap?: number;
+  class?: string;
+}
+
+const {
+  id,
+  autoplay = 4000,
+  itemsPerView = 1,
+  itemsPerViewTablet,
+  itemsPerViewMobile,
+  gap = 16,
+  class: className = "",
+} = Astro.props;
+
+const tablet = itemsPerViewTablet ?? Math.max(1, itemsPerView - 1);
+const mobile = itemsPerViewMobile ?? 1;
+---
+
+<div
+  class={`carousel relative ${className}`}
+  data-carousel-id={id}
+  data-autoplay={autoplay}
+  data-items={itemsPerView}
+  data-gap={gap}
+  style={`--c-items:${itemsPerView};--c-tablet:${tablet};--c-mobile:${mobile};--c-gap:${gap}px;`}
+>
+  <div class="carousel-viewport overflow-hidden">
+    <div class="carousel-track flex transition-transform duration-500 ease-out">
+      <slot />
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="carousel-prev absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-md transition hover:bg-white hover:text-[var(--site-blue)] disabled:opacity-30"
+    aria-label="Previous"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg>
+  </button>
+
+  <button
+    type="button"
+    class="carousel-next absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-md transition hover:bg-white hover:text-[var(--site-blue)] disabled:opacity-30"
+    aria-label="Next"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+    </svg>
+  </button>
+</div>
+
+<style>
+  .carousel-viewport {
+    margin-inline: 36px;
+  }
+
+  .carousel-track > :global(*) {
+    flex: 0 0 calc((100% - (var(--c-items) - 1) * var(--c-gap)) / var(--c-items));
+    min-width: 0;
+  }
+
+  @media (max-width: 1023px) {
+    .carousel-track > :global(*) {
+      flex-basis: calc((100% - (var(--c-tablet) - 1) * var(--c-gap)) / var(--c-tablet));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .carousel-viewport {
+      margin-inline: 28px;
+    }
+
+    .carousel-track > :global(*) {
+      flex-basis: calc((100% - (var(--c-mobile) - 1) * var(--c-gap)) / var(--c-mobile));
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('[data-carousel-id]').forEach((carousel) => {
+      const track = carousel.querySelector('.carousel-track');
+      const prevBtn = carousel.querySelector('.carousel-prev');
+      const nextBtn = carousel.querySelector('.carousel-next');
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const items = Array.from(track.children);
+      if (!items.length) return;
+
+      const gap = parseInt(carousel.dataset.gap || '16', 10);
+      const autoplayMs = parseInt(carousel.dataset.autoplay || '0', 10);
+      let index = 0;
+
+      function getItemsPerView() {
+        const width = window.innerWidth;
+        if (width <= 767) return parseInt(getComputedStyle(carousel).getPropertyValue('--c-mobile'), 10) || 1;
+        if (width <= 1023) return parseInt(getComputedStyle(carousel).getPropertyValue('--c-tablet'), 10) || 1;
+        return parseInt(getComputedStyle(carousel).getPropertyValue('--c-items'), 10) || 1;
+      }
+
+      function update() {
+        const perView = getItemsPerView();
+        const maxIndex = Math.max(0, items.length - perView);
+        index = Math.min(index, maxIndex);
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const shift = index * (itemWidth + gap);
+        track.style.transform = `translateX(-${shift}px)`;
+        prevBtn.disabled = index <= 0;
+        nextBtn.disabled = index >= maxIndex;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        index = Math.max(0, index - 1);
+        update();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const maxIndex = Math.max(0, items.length - getItemsPerView());
+        index = Math.min(maxIndex, index + 1);
+        update();
+      });
+
+      if (autoplayMs > 0) {
+        let timer = setInterval(() => {
+          const maxIndex = Math.max(0, items.length - getItemsPerView());
+          index = index >= maxIndex ? 0 : index + 1;
+          update();
+        }, autoplayMs);
+
+        carousel.addEventListener('mouseenter', () => clearInterval(timer));
+        carousel.addEventListener('mouseleave', () => {
+          clearInterval(timer);
+          timer = setInterval(() => {
+            const maxIndex = Math.max(0, items.length - getItemsPerView());
+            index = index >= maxIndex ? 0 : index + 1;
+            update();
+          }, autoplayMs);
+        });
+      }
+
+      window.addEventListener('resize', update);
+      update();
+    });
+  })();
+</script>
