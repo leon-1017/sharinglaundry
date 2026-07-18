@@ -22,7 +22,7 @@ const latestProducts = getLatest("product", 8);
     ) : null}
     <div class="absolute inset-0 bg-gradient-to-br from-[#0b1d33]/90 via-[#0f2440]/80 to-[#0b1d33]/95"></div>
     <div class="pixel-container relative z-10 text-center">
-      <h1 class="mx-auto max-w-[840px] text-[36px] font-bold leading-tight text-white md:text-[42px]">
+      <h1 class="mx-auto max-w-[1100px] text-[34px] font-bold leading-[1.15] text-white md:text-[40px] lg:text-[44px]">
         {homeContent.hero.title}
       </h1>
       <div class="mx-auto mt-[16px] h-[3px] w-[58px] bg-[var(--site-green)]"></div>
@@ -35,10 +35,10 @@ const latestProducts = getLatest("product", 8);
         </a>
       </div>
 
-      <div class="mx-auto mt-[42px] grid max-w-[840px] grid-cols-2 gap-x-[34px] gap-y-[28px] sm:grid-cols-4">
+      <div class="mx-auto mt-[42px] grid max-w-[940px] grid-cols-2 gap-x-[30px] gap-y-[30px] sm:grid-cols-4">
         {homeContent.showcaseItems.map((item) => (
           <a href={item.href} class="group text-center">
-            <div class="relative mx-auto h-[160px] w-[160px] overflow-hidden rounded-full bg-[#d8d8d8] shadow-[0_2px_4px_rgba(0,0,0,0.16)]">
+            <div class="relative mx-auto h-[180px] w-[180px] overflow-hidden rounded-full bg-[#d8d8d8] shadow-[0_2px_4px_rgba(0,0,0,0.16)]">
               <img
                 src={item.image}
                 alt={item.title}
