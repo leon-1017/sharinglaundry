@@ -10,11 +10,16 @@ const {
   description = "Commercial and industrial laundry equipment static site",
   image = "",
   canonical = "",
+  schemas = [],
 } = Astro.props;
 
 const canonicalUrl = canonical
   ? new URL(canonical, Astro.site ?? Astro.url).toString()
   : Astro.url.href;
+
+const ogImageUrl = image
+  ? new URL(image, Astro.site).toString()
+  : new URL("/wp-assets/uploads/SWE25S.png", Astro.site).toString();
 ---
 
 <!doctype html>
@@ -28,7 +33,15 @@ const canonicalUrl = canonical
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
-    {image ? <meta property="og:image" content={new URL(image, Astro.site).toString()} /> : null}
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="Wuxi Sharing Machinery Co.,Ltd" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl} />
   </head>

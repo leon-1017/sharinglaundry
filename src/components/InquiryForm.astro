@@ -17,9 +17,7 @@ const compact = Astro.props.compact ?? false;
       We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
     </p>
 
-    <p class="hidden bg-emerald-50 px-3 py-2 text-[12px] text-emerald-700" data-inquiry-success>
-      Inquiry captured locally. Wire `submitInquiry()` to your API when ready.
-    </p>
+    <p class="hidden bg-emerald-50 px-3 py-2 text-[12px] text-emerald-700" data-inquiry-success></p>
     <p class="hidden bg-rose-50 px-3 py-2 text-[12px] text-rose-700" data-inquiry-error></p>
   </form>
 </section>
@@ -27,7 +25,7 @@ const compact = Astro.props.compact ?? false;
 <script>
   const forms = document.querySelectorAll("[data-inquiry-form]");
   for (const form of forms) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const target = event.currentTarget;
       if (!(target instanceof HTMLFormElement)) return;
@@ -48,14 +46,31 @@ const compact = Astro.props.compact ?? false;
         return;
       }
 
-      if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         errorNode.textContent = "Please enter a valid email address.";
         errorNode.classList.remove("hidden");
         return;
       }
 
-      successNode.classList.remove("hidden");
-      target.reset();
+      try {
+        const response = await fetch("/api/inquiry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        });
+        const result = await response.json();
+        if (response.ok && result.success) {
+          successNode.textContent = result.message || "Thank you for your inquiry. We will get back to you soon.";
+          successNode.classList.remove("hidden");
+          target.reset();
+        } else {
+          errorNode.textContent = result.error || "Something went wrong. Please try again later.";
+          errorNode.classList.remove("hidden");
+        }
+      } catch {
+        errorNode.textContent = "Unable to send inquiry. Please try again later.";
+        errorNode.classList.remove("hidden");
+      }
     });
   }
 </script>

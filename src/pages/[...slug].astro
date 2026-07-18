@@ -55,6 +55,74 @@ const related = getRelatedEntries(entry);
 const productCategory = isProduct ? getProductCategory(entry) : null;
 const productImages = [...new Set([entry.image, ...entry.images].filter(Boolean))];
 
+const siteUrl = Astro.site?.toString() || "https://www.sharinglaundry.com";
+function absoluteUrl(path: string) {
+  return new URL(path, siteUrl).toString();
+}
+
+// JSON-LD schemas
+const breadcrumbItems: Array<{ name: string; item: string }> = [{ name: "Home", item: absoluteUrl("/") }];
+if (isProduct && productCategory) {
+  breadcrumbItems.push({ name: productCategory.label, item: absoluteUrl(productCategory.href) });
+  breadcrumbItems.push({ name: entry.title, item: absoluteUrl(entry.path) });
+} else if (entry.kind === "post") {
+  breadcrumbItems.push({ name: "News", item: absoluteUrl("/news/") });
+  breadcrumbItems.push({ name: entry.title, item: absoluteUrl(entry.path) });
+} else if (entry.path !== "/") {
+  breadcrumbItems.push({ name: entry.title, item: absoluteUrl(entry.path) });
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.item,
+  })),
+};
+
+const schemas: Array<Record<string, unknown>> = [breadcrumbSchema];
+
+if (isProduct) {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: entry.title,
+    image: productImages.map((img) => absoluteUrl(img)),
+    description: entry.description,
+    brand: {
+      "@type": "Brand",
+      name: "Wuxi Sharing Machinery Co.,Ltd",
+    },
+    url: absoluteUrl(entry.path),
+  });
+} else if (entry.kind === "post") {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: entry.title,
+    description: entry.description,
+    image: entry.image ? absoluteUrl(entry.image) : undefined,
+    datePublished: entry.datePublished,
+    dateModified: entry.dateModified || entry.datePublished,
+    author: {
+      "@type": "Organization",
+      name: "Wuxi Sharing Machinery Co.,Ltd",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Wuxi Sharing Machinery Co.,Ltd",
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/wp-assets/uploads/250X100.png"),
+      },
+    },
+    url: absoluteUrl(entry.path),
+  });
+}
+
 // 为重复路径提供 canonical(主要路径)
 const canonicalHref =
   entry.path.startsWith("/products/") && entry.path !== "/products/"
@@ -65,7 +133,7 @@ const canonicalHref =
       : null;
 ---
 
-<MainLayout title={`${entry.title} - Wuxi Sharing Machinery Co.,Ltd`} description={entry.description} image={entry.image} canonical={canonicalHref || undefined}>
+<MainLayout title={`${entry.title} - Wuxi Sharing Machinery Co.,Ltd`} description={entry.description} image={entry.image} canonical={canonicalHref || undefined} schemas={schemas}>
   {
     isProduct ? (
       <main class="pb-[60px]">
