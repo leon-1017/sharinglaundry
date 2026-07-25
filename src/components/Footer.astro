@@ -2,7 +2,7 @@
 import { productCategories } from "../data/navigation";
 ---
 
-<footer class="bg-white text-[#777]">
+<footer class="footer-metallic text-[#444]">
   <div class="pixel-container grid gap-12 py-[58px] md:grid-cols-[280px_260px_1fr]">
     <div>
       <a href="/" class="block w-[220px] max-w-full">
@@ -14,7 +14,7 @@ import { productCategories } from "../data/navigation";
       <h3 class="mb-5 text-[22px] font-bold text-[var(--site-blue)]">Products</h3>
       <nav class="grid gap-[13px]">
         {productCategories.map((item) => (
-          <a href={item.href} class="text-[13px] font-semibold uppercase text-[#777] hover:text-[var(--site-blue)]">{item.label}</a>
+          <a href={item.href} class="text-[13px] font-semibold uppercase text-[#666] hover:text-[var(--site-blue)]">{item.label}</a>
         ))}
       </nav>
     </div>
@@ -26,16 +26,50 @@ import { productCategories } from "../data/navigation";
         <p>+86-51066206136</p>
         <p>+86-13606196136</p>
         <p>info@sharinglaundry.com</p>
-        <a href="https://wa.me/+8613606196136" class="mt-1 inline-flex w-fit items-center rounded-[3px] bg-[#00aa7e] px-5 py-[7px] text-[13px] font-bold text-white">Chat on WhatsApp</a>
-        <a href="skype:jiaqifu1986?chat" class="inline-flex w-fit items-center rounded-[3px] bg-[#0a74d1] px-5 py-[7px] text-[13px] font-bold text-white">Chat on Skype</a>
+        <a href="https://wa.me/+8613606196136" class="mt-1 inline-flex w-fit items-center rounded-[3px] bg-[#00aa7e] px-5 py-[7px] text-[13px] font-bold text-[#f0f8f4]">Chat on WhatsApp</a>
+        <a href="skype:jiaqifu1986?chat" class="inline-flex w-fit items-center rounded-[3px] bg-[#0a74d1] px-5 py-[7px] text-[13px] font-bold text-[#e8f3fc]">Chat on Skype</a>
       </div>
     </div>
   </div>
-  <div class="pixel-container flex flex-col gap-3 pb-9 text-[13px] text-[#777] md:flex-row md:items-center md:justify-between">
+  <div class="pixel-container flex flex-col gap-3 border-t border-[#b8b8b8]/50 pb-9 pt-6 text-[13px] text-[#666] md:flex-row md:items-center md:justify-between">
     <div>Copyright © 2026 Wuxi Sharing Machinery Co.,Ltd</div>
     <div class="flex gap-2">
-      <a href="https://www.facebook.com/profile.php?id=100011834623780" class="flex h-5 w-5 items-center justify-center bg-[#555] text-[12px] font-bold text-white">f</a>
-      <a href="https://www.linkedin.com/in/mark-jia-364601b8?trk=nav_responsive_tab_profile_pic" class="flex h-5 w-5 items-center justify-center bg-[#555] text-[12px] font-bold text-white">in</a>
+      <a href="https://www.facebook.com/profile.php?id=100011834623780" class="flex h-5 w-5 items-center justify-center bg-[#3a3a3a] text-[12px] font-bold text-[#e8e8e8]">f</a>
+      <a href="https://www.linkedin.com/in/mark-jia-364601b8?trk=nav_responsive_tab_profile_pic" class="flex h-5 w-5 items-center justify-center bg-[#3a3a3a] text-[12px] font-bold text-[#e8e8e8]">in</a>
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-metallic {
+    background:
+      linear-gradient(
+        180deg,
+        #f5f5f5 0%,
+        #e8e8e8 25%,
+        #d8d8d8 50%,
+        #c4c4c4 75%,
+        #b0b0b0 100%
+      );
+    background-attachment: fixed;
+    position: relative;
+  }
+  .footer-metallic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.06) 0px,
+        rgba(255, 255, 255, 0.06) 1px,
+        rgba(0, 0, 0, 0.03) 1px,
+        rgba(0, 0, 0, 0.03) 2px
+      );
+    pointer-events: none;
+  }
+  .footer-metallic > * {
+    position: relative;
+    z-index: 1;
+  }
+</style>
