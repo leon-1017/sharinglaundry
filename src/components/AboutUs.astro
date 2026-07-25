@@ -1,0 +1,182 @@
+---
+import type { SiteEntry } from "../types/content";
+
+const { entry } = Astro.props as { entry: SiteEntry };
+
+const galleryImages = [
+  "/wp-assets/uploads/Company-Profile-1.jpg",
+  "/wp-assets/uploads/Company-Profile-2.jpg",
+  "/wp-assets/uploads/Company-Profile-3.jpg",
+  "/wp-assets/uploads/Company-Profile-4.jpg",
+  "/wp-assets/uploads/Company-Profile-5.jpg",
+  "/wp-assets/uploads/Company-Profile-6.jpg",
+];
+const certificateImages = [
+  "/wp-assets/uploads/cer-1.jpg",
+  "/wp-assets/uploads/cert-3.jpg",
+  "/wp-assets/uploads/cer-2.jpg",
+];
+
+const whyChooseItems = [
+  { title: "Expert Engineers", icon: "engineer" },
+  { title: "Experience Skills", icon: "skills" },
+  { title: "Affordable Costs", icon: "cost" },
+  { title: "Guarantee Services", icon: "guarantee" },
+  { title: "Trusted Work", icon: "trust" },
+  { title: "After Sale Service", icon: "service" },
+];
+
+const cultureItems = [
+  {
+    title: "Our Mission",
+    body: "To become the preferred supplier and first call for our customers, recognized for delivering innovative solutions and inspiration through our laundry equipment, service and relationships. To conduct business through trust, professionalism and innovation, based on our organization's ideals, values and philosophies, which we strive to achieve through the below.",
+  },
+  {
+    title: "Responsibility",
+    body: "We care about our staff, we aim to provide an enjoyable, healthy and safe environment for all team members. Our priority is to build strong and trusted relationships with customers and suppliers based on ethical business practices and deliver on our promises. We strive to protect our fragile environment by conducting the best practices in all areas of our business.",
+  },
+  {
+    title: "Innovation",
+    body: "Innovation is vitally important for our business. It is at the center of who we are and what we do. Through innovation, we will continue to find efficient business solutions and better manufacturing methods for our customers.",
+  },
+  {
+    title: "Excellence",
+    body: "We are committed to achieving shared goals based on open and honest communication. We enjoy what we do, we take pride in our job, products and vision. We constantly seek to meet and exceed the highest expectations of our employees, customers and suppliers by establishing and communicating clear expectations.",
+  },
+  {
+    title: "Integrity",
+    body: "We are focused on achieving the advantage of honest and loyal actions, as individuals and as an organization, without compromise. We strive to uphold the highest professional standards, thereby earning and maintaining the trust and respect of all company stakeholders.",
+  },
+];
+
+const iconPath: Record<string, string> = {
+  engineer: "M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3.3 0-8 1.7-8 5v1h16v-1c0-3.3-4.7-5-8-5z",
+  skills: "M5.5 7.5l1.4 1.4 2.6-2.6L18 15l-1.4 1.4-7.9-7.9-1.6 1.6L5.5 9.5 5.5 7.5zM4 18h16v2H4z",
+  cost: "M11 4h2v2h-2zm0 4h2v8h-2zm-1 9h4v2h-4z",
+  guarantee: "M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4zm-1 13l6-6-1.4-1.4L11 12.2 8.4 9.6 7 11l4 4z",
+  trust: "M12 2l3 6 6 .9-4.5 4.4 1 6.7L12 16.8 6.5 20l1-6.7L3 8.9 9 8z",
+  service: "M12 2a10 10 0 100 20 10 10 0 000-20zm1 5h-2v6h6v-2h-4V7z",
+};
+---
+
+<main>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-[#f3f3f3] py-[90px] md:py-[110px]" data-reveal="fade">
+    <div class="pixel-container grid items-center gap-[40px] md:grid-cols-[1fr_1.1fr]">
+      <div>
+        <h1 class="text-[36px] font-normal leading-tight text-[var(--site-blue)] md:text-[44px]">ABOUT US</h1>
+        <h2 class="mt-[14px] max-w-[480px] text-[22px] font-bold leading-snug text-[var(--site-blue-dark)] md:text-[26px]">
+          Focus on Industrial and Commercial Laundry Equipment over 15 years
+        </h2>
+      </div>
+      <div class="relative">
+        <div class="aspect-[1.4/1] w-full overflow-hidden bg-[#e8eaed]">
+          <img src="/wp-assets/uploads/SWE25S.png" alt="Industrial laundry equipment" class="h-full w-full object-contain" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Profile -->
+  <section class="section-lg" data-reveal="fade-up">
+    <div class="pixel-container">
+      <div class="text-center">
+        <h2 class="site-section-title mx-auto inline-block">Company Profile</h2>
+      </div>
+
+      <div class="mt-[60px] grid gap-[50px] md:grid-cols-[1fr_1.1fr]">
+        <div>
+          <h3 class="text-[20px] font-bold text-[var(--site-blue-dark)]">Brief Introduction</h3>
+          <div class="mt-[20px] space-y-[16px] text-[15px] leading-[1.7] text-[#777]">
+            <p>Wuxi Sharing Machinery Co., Ltd located in East China, 100km away from Shanghai, specializes in manufacturing and selling China's best quality commercial and industrial laundry equipment, including washer extractors, tumble dryers, flatwork ironers, folders, dry cleaning machines, laundry press machine, and finishing equipment, etc.</p>
+            <p>We are acknowledged as a leading supplier in the field of industrial and commercial laundry equipment in China now. In the past 15 years, We have established long-term and mutually beneficial relationships with our customers at home and abroad.</p>
+            <p>Sharing's laundry equipment is popular with customers at home and abroad, we always commit to continuing innovation &amp; improvement, providing high-quality machines, professional &amp; sincere service and competitive prices.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-[14px]">
+          {galleryImages.map((src, idx) => (
+            <div class="aspect-[1.35/1] overflow-hidden bg-[#f1f1f1]">
+              <img
+                src={src}
+                alt={`Company profile ${idx + 1}`}
+                class="h-full w-full object-cover transition duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-lg bg-white" data-reveal="fade-up">
+    <div class="pixel-container">
+      <div class="text-center">
+        <h2 class="site-section-title mx-auto inline-block">Why Choose Us</h2>
+      </div>
+
+      <div class="mx-auto mt-[70px] grid max-w-[860px] grid-cols-1 gap-x-[60px] gap-y-[42px] sm:grid-cols-2 md:grid-cols-3">
+        {whyChooseItems.map((item) => (
+          <div class="flex flex-col items-center text-center">
+            <div class="flex h-[80px] w-[80px] items-center justify-center rounded-full border border-[#d8d8d8] text-[var(--site-blue)]">
+              <svg class="h-[36px] w-[36px] fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d={iconPath[item.icon]} />
+              </svg>
+            </div>
+            <h3 class="mt-[18px] text-[16px] font-semibold text-[#333]">{item.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Culture -->
+  <section class="section-lg bg-[#fafafa]" data-reveal="fade-up">
+    <div class="pixel-container">
+      <div class="text-center">
+        <h2 class="site-section-title mx-auto inline-block">Company Culture</h2>
+      </div>
+
+      <div class="mx-auto mt-[60px] max-w-[860px] space-y-[34px]">
+        {cultureItems.map((item) => (
+          <div>
+            <h3 class="text-[18px] font-bold text-[var(--site-blue)]">{item.title}</h3>
+            <p class="mt-[12px] text-[15px] leading-[1.75] text-[#777]">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="section-lg bg-white" data-reveal="fade-up">
+    <div class="pixel-container">
+      <div class="text-center">
+        <h2 class="site-section-title mx-auto inline-block">Certificates</h2>
+      </div>
+
+      <div class="mx-auto mt-[60px] grid max-w-[1080px] grid-cols-1 gap-[28px] sm:grid-cols-2 md:grid-cols-3">
+        {certificateImages.map((src) => (
+          <div class="overflow-hidden bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+            <img src={src} alt="Certificate" class="aspect-[3/4] w-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotline CTA -->
+  <section class="relative overflow-hidden bg-[#eaeaea] py-[80px] text-center" data-reveal="fade-up">
+    <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-[#d9dde2] md:block" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"></div>
+    <div class="pixel-container relative">
+      <p class="text-[14px] font-semibold tracking-[0.18em] text-[var(--site-blue)]">HOTLINE 24/7</p>
+      <h2 class="mt-[14px] text-[28px] font-bold text-[var(--site-blue)] md:text-[32px]">+86-13606196136, 13861751289</h2>
+      <div class="mx-auto mt-[24px] h-[2px] w-[60px] bg-[var(--site-green)]"></div>
+      <p class="mt-[34px] text-[15px] font-semibold tracking-[0.12em] text-[var(--site-blue)]">Start Your Laundry Business Today</p>
+      <div class="mt-[24px]">
+        <a href="/contact-us/" class="btn-primary">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+</main>

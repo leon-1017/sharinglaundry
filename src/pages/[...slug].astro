@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import AboutUs from "../components/AboutUs.astro";
 import InquiryForm from "../components/InquiryForm.astro";
 import EntryGrid from "../components/EntryGrid.astro";
 import ProductGrid from "../components/ProductGrid.astro";
@@ -28,6 +29,7 @@ const allProducts = getProductCollection();
 const isProduct = entry.kind === "product";
 const isContact = entry.path === "/contact-us/";
 const isRefund = entry.path === "/refund-and-returns-policy/";
+const isAboutUs = entry.path === "/about-us/";
 
 // 页面 hero 背景图映射
 const heroBgMap: Record<string, string> = {
@@ -267,6 +269,8 @@ const canonicalHref =
           </div>
         </section>
       </main>
+    ) : isAboutUs ? (
+      <AboutUs entry={entry} />
     ) : isListing ? (
       <main class="bg-white">
         {heroBg ? (
