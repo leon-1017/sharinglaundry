@@ -174,16 +174,16 @@ const canonicalHref =
           <div>
             <div class="border border-[#e5e5e5] bg-white p-[12px]">
               {entry.image ? (
-                <img src={entry.image} alt={entry.title} class="aspect-square w-full object-cover" />
+                <img src={entry.image} alt={entry.title} class="aspect-square w-full object-cover" data-product-main-img />
               ) : (
                 <div class="aspect-square bg-[#f1f1f1]" />
               )}
             </div>
             <div class="mt-[15px] flex gap-[12px]">
-              {productImages.slice(0, 3).map((image) => (
-                <div class="h-[82px] w-[82px] border border-[#d5d5d5] p-[4px]">
+              {productImages.slice(0, 3).map((image, idx) => (
+                <button type="button" class="h-[82px] w-[82px] border border-[#d5d5d5] p-[4px] transition hover:border-[var(--site-blue)] aria-pressed:border-[var(--site-blue)]" data-product-thumb={image} aria-pressed={idx === 0 ? "true" : "false"}>
                   <img src={image} alt={entry.title} class="h-full w-full object-cover" />
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -383,6 +383,18 @@ const canonicalHref =
         panels.forEach((panel) => {
           panel.classList.toggle("hidden", panel.dataset.tabPanel !== target);
         });
+      });
+    });
+  });
+
+  // 产品页缩略图切换主图
+  document.querySelectorAll("[data-product-thumb]").forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      const mainImg = document.querySelector<HTMLImageElement>("[data-product-main-img]");
+      if (!mainImg) return;
+      mainImg.src = (thumb as HTMLElement).dataset.productThumb || mainImg.src;
+      mainImg.parentElement?.querySelectorAll("[data-product-thumb]").forEach((btn) => {
+        btn.setAttribute("aria-pressed", btn === thumb ? "true" : "false");
       });
     });
   });
