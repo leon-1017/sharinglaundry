@@ -35,6 +35,7 @@ const isSupport = entry.path === "/support/";
 const isApplication = entry.path === "/application/";
 const isAppSub = entry.path.startsWith("/application/") && entry.path !== "/application/";
 const isNews = entry.path === "/news/";
+const isNewsPost = entry.kind === "post";
 
 // Application 子页面：从 contentHtml 提取图片、描述、方案
 let appImage = "";
@@ -74,7 +75,7 @@ const heroBgMap: Record<string, string> = {
   "/support/": "/wp-assets/uploads/img-banner-support.jpg",
   "/application/": "/wp-assets/uploads/img-bg-laundry.jpg",
 };
-const heroBg = heroBgMap[entry.path] || (entry.path.startsWith("/products/") || entry.path.startsWith("/product/") || entry.path.startsWith("/application/") ? "/wp-assets/uploads/img-bg-laundry.jpg" : null);
+const heroBg = heroBgMap[entry.path] || (entry.path.startsWith("/products/") || entry.path.startsWith("/product/") || entry.path.startsWith("/application/") ? "/wp-assets/uploads/img-bg-laundry.jpg" : entry.kind === "post" ? "/wp-assets/uploads/img-newsbanner.jpg" : null);
 
 const isListing =
   entry.kind === "productCategory" ||
@@ -389,11 +390,20 @@ const canonicalHref =
             </div>
           </section>
         ) : null}
+        {isNewsPost ? (
+          <nav class="pixel-container py-[18px] text-[14px] text-[#777]">
+            <a href="/" class="hover:text-[var(--site-blue)]">Home</a>
+            <span class="px-2">/</span>
+            <a href="/news/" class="hover:text-[var(--site-blue)]">News</a>
+            <span class="px-2">/</span>
+            <span>{entry.title}</span>
+          </nav>
+        ) : null}
         {!isApplication && !isAppSub ? (
         <section class="section-md pixel-container" data-reveal="fade-up">
           {!heroBg ? <h1 class="site-section-title">{entry.title}</h1> : null}
           {!isSupport && entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
-          {!isSupport && entry.image && !entry.imageBoxCards?.length ? (
+          {!isSupport && !isNewsPost && entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
           <article class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
