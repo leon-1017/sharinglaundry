@@ -340,13 +340,48 @@ const canonicalHref =
           ) : null}
           <article class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
             {isSupport ? (
-              <div set:html={(entry.fallbackContent || entry.contentHtml).replace(/<h3>.*?<\/h3>\s*<hr>\s*<p>.*?<\/p>/s, '').replace(/<figure class="content-image">.*?<\/figure>/gs, '')}></div>
+              <>
+                <h2 class="text-[20px] font-bold text-[var(--site-blue-dark)]">Pre-Sales Service Support</h2>
+                <p class="mt-[16px] text-[15px] leading-[1.7] text-[#777]">Sharing's Pre-sales service support department will work directly with you to determine your needs, knowing that the correct type and degree of agitation is a crucial factor in almost every processing operation.</p>
+                <p class="mt-[14px] text-[15px] leading-[1.7] text-[#777]">These close customer relationships ensure that our products are manufactured to meet exact requirements for each specific application.</p>
+                <p class="mt-[14px] text-[15px] leading-[1.7] text-[#777]">Engineering staff take into consideration the capacity, size and budgets, etc. Then they select from a vast range of options to provide the best choice in solutions for the application type and the size of the agitating unit required for the job.</p>
+
+                <div class="mt-[30px] grid gap-[16px] sm:grid-cols-2">
+                  <div class="overflow-hidden">
+                    <img src="/wp-assets/uploads/img-support-01.jpeg" alt="Pre-sales service support" class="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                  <div class="overflow-hidden">
+                    <img src="/wp-assets/uploads/img-support-02.jpg" alt="Pre-sales consultation" class="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                </div>
+
+                <h2 class="mb-[16px] mt-[40px] text-[20px] font-bold text-[var(--site-blue-dark)]">After-Sales Service Support</h2>
+                <p class="text-[15px] leading-[1.7] text-[#777]">Sharing's After-sales service support department will provide the following services:</p>
+                <ol class="mt-[14px] list-decimal space-y-[10px] pl-[20px] text-[15px] leading-[1.7] text-[#777]">
+                  <li>Spare parts for every piece of equipment with interchangeability guarantee and best delivery time.</li>
+                  <li>Technical assistance or supervision on-site during the installation, maintenance, commissioning and start-up phases.</li>
+                  <li>Customized maintenance programs (Periodic or as-required maintenance, during and after the warranty period).</li>
+                  <li>Each service task is documented in our equipment records. This way the current condition and life cycle can always be displayed and analyzed. This service is free of charge for the owner of a Sharing's laundry equipment.</li>
+                </ol>
+              </>
             ) : (
               <div set:html={entry.fallbackContent || entry.contentHtml}></div>
             )}
           </article>
           {isRefund ? <a href="/contact-us/" class="btn-primary mt-[30px]">Contact Sales</a> : null}
         </section>
+
+        {isSupport ? (
+          <section class="section-md slanted-bg bg-white text-center" data-reveal="fade-up">
+            <div class="pixel-container">
+              <div class="text-[13px] font-bold uppercase tracking-[0.22em] text-[var(--site-blue)]">HOTLINE 24/7</div>
+              <div class="mt-[16px] text-[28px] font-bold text-[var(--site-blue)]">+86-13606196136, 13861751289</div>
+              <div class="mx-auto mt-[16px] h-[3px] w-[58px] bg-[var(--site-green)]"></div>
+              <div class="mt-[24px] text-[14px] font-bold tracking-[0.22em] text-[var(--site-blue)]">Start Your Laundry Business Today</div>
+              <a href="/contact-us/" class="btn-primary mt-[25px]">Contact Our Team <span>&gt;</span></a>
+            </div>
+          </section>
+        ) : null}
         {entry.imageBoxCards && entry.imageBoxCards.length > 0 ? (
           <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
             <div class="pixel-container">
