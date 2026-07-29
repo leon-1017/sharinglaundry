@@ -39,7 +39,7 @@ const heroBgMap: Record<string, string> = {
   "/support/": "/wp-assets/uploads/img-banner-support.jpg",
   "/application/": "/wp-assets/uploads/img-bg-laundry.jpg",
 };
-const heroBg = heroBgMap[entry.path] || (entry.path.startsWith("/products/") ? "/wp-assets/uploads/img-bg-laundry.jpg" : null);
+const heroBg = heroBgMap[entry.path] || (entry.path.startsWith("/products/") || entry.path.startsWith("/product/") ? "/wp-assets/uploads/img-bg-laundry.jpg" : null);
 
 const isListing =
   entry.kind === "productCategory" ||
@@ -150,6 +150,18 @@ const canonicalHref =
   {
     isProduct ? (
       <main class="pb-[60px]">
+        {heroBg ? (
+          <section class="relative overflow-hidden bg-cover bg-center bg-no-repeat py-[90px] text-white" style={`background-image: url('${heroBg}');`} data-reveal="fade">
+            <div class="absolute inset-0 bg-[#0b1d33]/75"></div>
+            <div class="pixel-container relative z-10">
+              <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
+              <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+              <p class="mt-[20px] max-w-[640px] text-[18px] font-bold leading-[1.5] text-white">
+                Focus on Industrial and Commercial Laundry Equipment over 15 years
+              </p>
+            </div>
+          </section>
+        ) : null}
         <nav class="pixel-container py-[18px] text-[14px] text-[#777]">
           <a href="/" class="hover:text-[var(--site-blue)]">Home</a>
           <span class="px-2">/</span>
@@ -177,7 +189,7 @@ const canonicalHref =
           </div>
 
           <div class="pt-[10px]">
-            <h1 class="text-[31px] font-normal leading-tight text-[var(--site-heading)]">{entry.title}</h1>
+            <h2 class="text-[31px] font-normal leading-tight text-[var(--site-heading)]">{entry.title}</h2>
             <div class="my-[26px] h-px bg-[#e5e5e5]"></div>
             <p class="text-[15px] leading-[1.7] text-[#777]">{entry.description}</p>
             <div class="mt-[22px] text-[14px] text-[#777]">
