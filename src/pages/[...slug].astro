@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import AboutUs from "../components/AboutUs.astro";
 import InquiryForm from "../components/InquiryForm.astro";
 import EntryGrid from "../components/EntryGrid.astro";
+import EntryCard from "../components/EntryCard.astro";
 import ProductGrid from "../components/ProductGrid.astro";
 import {
   formatDate,
@@ -33,6 +34,7 @@ const isAboutUs = entry.path === "/about-us/";
 const isSupport = entry.path === "/support/";
 const isApplication = entry.path === "/application/";
 const isAppSub = entry.path.startsWith("/application/") && entry.path !== "/application/";
+const isNews = entry.path === "/news/";
 
 // Application 子页面：从 contentHtml 提取图片、描述、方案
 let appImage = "";
@@ -338,9 +340,22 @@ const canonicalHref =
               <ProductGrid
                 products={listingProducts}
               />
+            ) : isNews ? (
+              <>
+                <div id="news-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {listingEntries.map((item, idx) => (
+                    <div data-news-page={Math.floor(idx / 12) + 1} class:list={[idx >= 12 ? "hidden" : ""]}>
+                      <EntryCard entry={item} />
+                    </div>
+                  ))}
+                </div>
+                {listingEntries.length > 12 ? (
+                  <div id="news-pagination" class="mt-[40px] flex justify-center gap-[8px]"></div>
+                ) : null}
+              </>
             ) : (
               <EntryGrid
-                title={entry.path === "/news/" ? "News" : "Products"}
+                title="Products"
                 entries={listingEntries}
               />
             )}
@@ -533,4 +548,42 @@ const canonicalHref =
       });
     });
   });
+
+  // News 页面分页（每页12条，4列×3行）
+  (function() {
+    const items = document.querySelectorAll<HTMLElement>("[data-news-page]");
+    if (!items.length) return;
+    const perPage = 12;
+    const totalPages = Math.ceil(items.length / perPage);
+    const pagination = document.getElementById("news-pagination");
+    if (!pagination) return;
+
+    function showPage(page: number) {
+      items.forEach((el) => {
+        el.classList.toggle("hidden", el.dataset.newsPage !== String(page));
+      });
+      pagination!.querySelectorAll("button").forEach((btn) => {
+        const isActive = (btn as HTMLElement).dataset.page === String(page);
+        btn.classList.toggle("bg-[var(--site-blue)]", isActive);
+        btn.classList.toggle("text-white", isActive);
+        btn.classList.toggle("border-[var(--site-blue)]", isActive);
+        btn.classList.toggle("border-[#d5d5d5]", !isActive);
+        btn.classList.toggle("text-[#777]", !isActive);
+      });
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = String(i);
+      btn.dataset.page = String(i);
+      btn.className = "h-[38px] w-[38px] border text-[14px] transition hover:border-[var(--site-blue)]";
+      if (i === 1) {
+        btn.classList.add("bg-[var(--site-blue)]", "text-white", "border-[var(--site-blue)]");
+      } else {
+        btn.classList.add("border-[#d5d5d5]", "text-[#777]");
+      }
+      btn.addEventListener("click", () => showPage(i));
+      pagination.appendChild(btn);
+    }
+  })();
 </script>
