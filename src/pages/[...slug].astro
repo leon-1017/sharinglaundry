@@ -37,14 +37,15 @@ const isAppSub = entry.path.startsWith("/application/") && entry.path !== "/appl
 // Application 子页面：从 contentHtml 提取图片、描述、方案
 let appImage = "";
 let appDescription = "";
-let appSolution = "";
+let appSolutions = "";
 if (isAppSub && entry.contentHtml) {
   const imgMatch = entry.contentHtml.match(/src="([^"]+)"/);
   appImage = imgMatch ? imgMatch[1] : "";
   const descMatch = entry.contentHtml.match(/<\/figure>\s*<p>(.*?)<\/p>/s);
   appDescription = descMatch ? descMatch[1] : "";
-  const solMatch = entry.contentHtml.match(/<h3>Solution:<\/h3>\s*<p>(.*?)<\/p>/s);
-  appSolution = solMatch ? solMatch[1] : "";
+  // 提取描述段落之后到 HOTLINE 之前的所有方案内容（含多个 h3/p 段落）
+  const solutionsMatch = entry.contentHtml.match(/<\/p>\s*([\s\S]*?)<h6>HOTLINE/);
+  appSolutions = solutionsMatch ? solutionsMatch[1].trim() : "";
 }
 
 // 页面 hero 背景图映射
@@ -410,11 +411,8 @@ const canonicalHref =
                 {appDescription ? (
                   <p class="text-[15px] leading-[1.7] text-[#777]" set:html={appDescription} />
                 ) : null}
-                {appSolution ? (
-                  <div class="mt-[30px]">
-                    <h3 class="text-[18px] font-bold text-[var(--site-blue)]">Solution:</h3>
-                    <div class="mt-[12px] text-[15px] leading-[1.7] text-[#777]" set:html={appSolution} />
-                  </div>
+                {appSolutions ? (
+                  <div class="app-solutions mt-[30px]" set:html={appSolutions} />
                 ) : null}
                 <a href="/contact-us/" class="btn-primary mt-[30px]">Request an Offer</a>
               </div>
