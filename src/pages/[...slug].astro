@@ -37,7 +37,8 @@ const isAppSub = entry.path.startsWith("/application/") && entry.path !== "/appl
 // Application 子页面：从 contentHtml 提取图片、描述、方案
 let appImage = "";
 let appDescription = "";
-let appSolutions = "";
+let appSolutionsLeft = "";
+let appSolutionsRight = "";
 if (isAppSub && entry.contentHtml) {
   const imgMatch = entry.contentHtml.match(/src="([^"]+)"/);
   appImage = imgMatch ? imgMatch[1] : "";
@@ -45,7 +46,22 @@ if (isAppSub && entry.contentHtml) {
   appDescription = descMatch ? descMatch[1] : "";
   // 提取描述段落之后到 HOTLINE 之前的所有方案内容（含多个 h3/p 段落）
   const solutionsMatch = entry.contentHtml.match(/<\/p>\s*([\s\S]*?)<h6>HOTLINE/);
-  appSolutions = solutionsMatch ? solutionsMatch[1].trim() : "";
+  const rawSolutions = solutionsMatch ? solutionsMatch[1].trim() : "";
+  // 按 h3 拆分为多个块，左右分列
+  const blocks = rawSolutions.split(/(?=<h3>)/);
+  const leftBlocks: string[] = [];
+  const rightBlocks: string[] = [];
+  blocks.forEach((block, i) => {
+    const trimmed = block.trim();
+    if (!trimmed) return;
+    if (i % 2 === 0) {
+      leftBlocks.push(trimmed);
+    } else {
+      rightBlocks.push(trimmed);
+    }
+  });
+  appSolutionsLeft = leftBlocks.join("");
+  appSolutionsRight = rightBlocks.join("");
 }
 
 // 页面 hero 背景图映射
@@ -414,16 +430,21 @@ const canonicalHref =
               </div>
             </div>
             <div class="mt-[48px] grid gap-[48px] md:grid-cols-[1fr_1fr]">
-              {appSolutions ? (
-                <div class="app-solutions" set:html={appSolutions} />
+              {appSolutionsLeft ? (
+                <div class="app-solutions" set:html={appSolutionsLeft} />
               ) : null}
-              <div>
-                <div class="text-[13px] font-bold uppercase tracking-[0.22em] text-[var(--site-blue)]">HOTLINE 24/7</div>
-                <div class="mt-[16px] text-[28px] font-bold text-[var(--site-blue)]">+86-13606196136, 13861751289</div>
-                <div class="mt-[16px] h-[3px] w-[58px] bg-[var(--site-green)]"></div>
-                <div class="mt-[24px] text-[14px] font-bold tracking-[0.22em] text-[var(--site-blue)]">Start Your Laundry Business Today</div>
-                <a href="/contact-us/" class="btn-primary mt-[25px]">Contact Our Team <span>&gt;</span></a>
-              </div>
+              {appSolutionsRight ? (
+                <div class="app-solutions" set:html={appSolutionsRight} />
+              ) : null}
+            </div>
+          </section>
+          <section class="section-md slanted-bg bg-white text-center" data-reveal="fade-up">
+            <div class="pixel-container">
+              <div class="text-[13px] font-bold uppercase tracking-[0.22em] text-[var(--site-blue)]">HOTLINE 24/7</div>
+              <div class="mt-[16px] text-[28px] font-bold text-[var(--site-blue)]">+86-13606196136, 13861751289</div>
+              <div class="mx-auto mt-[16px] h-[3px] w-[58px] bg-[var(--site-green)]"></div>
+              <div class="mt-[24px] text-[14px] font-bold tracking-[0.22em] text-[var(--site-blue)]">Start Your Laundry Business Today</div>
+              <a href="/contact-us/" class="btn-primary mt-[25px]">Contact Our Team <span>&gt;</span></a>
             </div>
           </section>
         ) : null}
