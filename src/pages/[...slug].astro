@@ -279,13 +279,18 @@ const canonicalHref =
             <div class="pixel-container relative z-10">
               <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
               <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+              {entry.path === "/products/" ? (
+                <p class="mt-[20px] max-w-[640px] text-[18px] font-bold leading-[1.5] text-white">
+                  Focus on Industrial and Commercial Laundry Equipment over 15 years
+                </p>
+              ) : null}
             </div>
           </section>
         ) : null}
         <section class="section-md pixel-container" data-reveal="fade-up">
           {!heroBg ? <h1 class="site-section-title">{entry.title}</h1> : null}
           <div class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
-            {entry.contentHtml ? <div set:html={entry.contentHtml}></div> : null}
+            {entry.contentHtml && !(heroBg && entry.path === "/products/") ? <div set:html={entry.contentHtml}></div> : null}
           </div>
         </section>
         <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
