@@ -30,6 +30,7 @@ const isProduct = entry.kind === "product";
 const isContact = entry.path === "/contact-us/";
 const isRefund = entry.path === "/refund-and-returns-policy/";
 const isAboutUs = entry.path === "/about-us/";
+const isSupport = entry.path === "/support/";
 
 // 页面 hero 背景图映射
 const heroBgMap: Record<string, string> = {
@@ -322,6 +323,12 @@ const canonicalHref =
             <div class="pixel-container relative z-10">
               <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
               <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+              {isSupport ? (
+                <div class="mt-[20px] max-w-[640px]">
+                  <p class="text-[22px] font-bold leading-snug text-white md:text-[26px]">We are here with you every step of the way</p>
+                  <p class="mt-[14px] text-[16px] leading-[1.7] text-white/85">Sharing's customer service support including pre-sales and after-sales service support, made up by experienced technical staff, is able to assist every customer with detailed requirements or problems.</p>
+                </div>
+              ) : null}
             </div>
           </section>
         ) : null}
@@ -332,7 +339,11 @@ const canonicalHref =
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
           <article class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
-            <div set:html={entry.fallbackContent || entry.contentHtml}></div>
+            {isSupport ? (
+              <div set:html={(entry.fallbackContent || entry.contentHtml).replace(/<h3>.*?<\/h3>\s*<hr>\s*<p>.*?<\/p>/s, '')}></div>
+            ) : (
+              <div set:html={entry.fallbackContent || entry.contentHtml}></div>
+            )}
           </article>
           {isRefund ? <a href="/contact-us/" class="btn-primary mt-[30px]">Contact Sales</a> : null}
         </section>
