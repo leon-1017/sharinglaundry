@@ -293,14 +293,9 @@ const canonicalHref =
             <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
             <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
             <p class="mt-[24px] max-w-[720px] text-[15px] leading-[1.7] text-white/85">
-              We are committed to protecting your privacy and personal information collected through this contact form, and will not share, sell, or distribute it to third parties without your consent, except as required by law or necessary to fulfill your request.
+              Welcome to our contact page! We're glad that you're interested in getting in touch with us. Whether you have a question, a suggestion, or just want to say hello, we're here to listen.
             </p>
-            <a href="#inquiry-form" class="btn-primary mt-[30px]">Send Inquiry</a>
           </div>
-        </section>
-        <section class="section-md pixel-container" data-reveal="fade-up">
-          <h2 class="site-section-title">Contact Details</h2>
-          <div class="content-prose mt-[34px]" set:html={entry.contentHtml}></div>
         </section>
         <section id="inquiry-form" class="section-md bg-[var(--site-gray-band)]" data-reveal="fade-up">
           <div class="pixel-container grid gap-[60px] md:grid-cols-[0.9fr_1fr]">
@@ -314,6 +309,9 @@ const canonicalHref =
               </div>
             </div>
             <InquiryForm compact={true} />
+          </div>
+          <div class="pixel-container mt-[60px]">
+            <iframe src="https://www.google.com/maps?q=No.588+Nanhu+Avenue+Wuxi+City+China&output=embed" width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
           </div>
         </section>
       </main>
