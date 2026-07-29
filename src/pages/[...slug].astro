@@ -334,13 +334,13 @@ const canonicalHref =
         ) : null}
         <section class="section-md pixel-container" data-reveal="fade-up">
           {!heroBg ? <h1 class="site-section-title">{entry.title}</h1> : null}
-          {entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
-          {entry.image && !entry.imageBoxCards?.length ? (
+          {!isSupport && entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
+          {!isSupport && entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
           <article class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
             {isSupport ? (
-              <div set:html={(entry.fallbackContent || entry.contentHtml).replace(/<h3>.*?<\/h3>\s*<hr>\s*<p>.*?<\/p>/s, '')}></div>
+              <div set:html={(entry.fallbackContent || entry.contentHtml).replace(/<h3>.*?<\/h3>\s*<hr>\s*<p>.*?<\/p>/s, '').replace(/<figure class="content-image">.*?<\/figure>/gs, '')}></div>
             ) : (
               <div set:html={entry.fallbackContent || entry.contentHtml}></div>
             )}
