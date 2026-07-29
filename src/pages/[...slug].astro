@@ -338,10 +338,11 @@ const canonicalHref =
             </div>
           </section>
         ) : null}
+        {!isApplication ? (
         <section class="section-md pixel-container" data-reveal="fade-up">
           {!heroBg ? <h1 class="site-section-title">{entry.title}</h1> : null}
-          {!isSupport && !isApplication && entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
-          {!isSupport && !isApplication && entry.image && !entry.imageBoxCards?.length ? (
+          {!isSupport && entry.datePublished ? <p class="mt-[22px] text-[14px] text-[#777]">{formatDate(entry.datePublished)}</p> : null}
+          {!isSupport && entry.image && !entry.imageBoxCards?.length ? (
             <img src={entry.image} alt={entry.title} class="mt-[34px] max-h-[520px] w-full object-cover" />
           ) : null}
           <article class:list={["content-prose", !heroBg ? "mt-[34px]" : ""]}>
@@ -370,12 +371,13 @@ const canonicalHref =
                   <li>Each service task is documented in our equipment records. This way the current condition and life cycle can always be displayed and analyzed. This service is free of charge for the owner of a Sharing's laundry equipment.</li>
                 </ol>
               </>
-            ) : isApplication ? null : (
+            ) : (
               <div set:html={entry.fallbackContent || entry.contentHtml}></div>
             )}
           </article>
           {isRefund ? <a href="/contact-us/" class="btn-primary mt-[30px]">Contact Sales</a> : null}
         </section>
+        ) : null}
 
         {isSupport ? (
           <section class="section-md slanted-bg bg-white text-center" data-reveal="fade-up">
