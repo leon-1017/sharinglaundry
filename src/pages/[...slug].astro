@@ -371,6 +371,15 @@ const canonicalHref =
             <div class="pixel-container relative z-10">
               <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
               <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+              {isNewsPost ? (
+                <nav class="mt-[16px] text-[14px] text-white/80">
+                  <a href="/" class="hover:text-white">Home</a>
+                  <span class="px-2">/</span>
+                  <a href="/news/" class="hover:text-white">News</a>
+                  <span class="px-2">/</span>
+                  <span>{entry.title}</span>
+                </nav>
+              ) : null}
               {isSupport ? (
                 <div class="mt-[20px] max-w-[640px]">
                   <p class="text-[22px] font-bold leading-snug text-white md:text-[26px]">We are here with you every step of the way</p>
@@ -389,15 +398,6 @@ const canonicalHref =
               ) : null}
             </div>
           </section>
-        ) : null}
-        {isNewsPost ? (
-          <nav class="pixel-container py-[18px] text-[14px] text-[#777]">
-            <a href="/" class="hover:text-[var(--site-blue)]">Home</a>
-            <span class="px-2">/</span>
-            <a href="/news/" class="hover:text-[var(--site-blue)]">News</a>
-            <span class="px-2">/</span>
-            <span>{entry.title}</span>
-          </nav>
         ) : null}
         {!isApplication && !isAppSub ? (
         <section class="section-md pixel-container" data-reveal="fade-up">
