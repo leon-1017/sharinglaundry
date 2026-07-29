@@ -12,12 +12,14 @@ const { title, eyebrow, products, emptyMessage } = Astro.props as {
 ---
 
 <section class="space-y-6">
-  <div>
-    {eyebrow ? (
-      <div class="mb-1 text-[13px] font-bold uppercase tracking-[0.26em] text-[var(--site-blue)]">{eyebrow}</div>
-    ) : null}
-    <h2 class="site-section-title">{title}</h2>
-  </div>
+  {title || eyebrow ? (
+    <div>
+      {eyebrow ? (
+        <div class="mb-1 text-[13px] font-bold uppercase tracking-[0.26em] text-[var(--site-blue)]">{eyebrow}</div>
+      ) : null}
+      {title ? <h2 class="site-section-title">{title}</h2> : null}
+    </div>
+  ) : null}
   {
     products.length ? (
       <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
