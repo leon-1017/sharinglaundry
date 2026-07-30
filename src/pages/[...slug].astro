@@ -542,7 +542,6 @@ const canonicalHref =
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
         const target = tab.dataset.tab;
-        // 切换按钮样式
         tabs.forEach((btn) => {
           const isActive = btn === tab;
           btn.classList.toggle("bg-white", isActive);
@@ -551,7 +550,6 @@ const canonicalHref =
           btn.classList.toggle("bg-neutral-120", !isActive);
           btn.classList.toggle("text-neutral-600", !isActive);
         });
-        // 切换面板
         panels.forEach((panel) => {
           panel.classList.toggle("hidden", panel.dataset.tabPanel !== target);
         });
