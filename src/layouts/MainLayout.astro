@@ -46,6 +46,7 @@ const ogImageUrl = image
     <link rel="canonical" href={canonicalUrl} />
   </head>
   <body>
+    <div class="scroll-strip" aria-hidden="true"></div>
     <Header />
     <slot />
     <Footer />
@@ -58,15 +59,25 @@ const ogImageUrl = image
           if (!header) return;
           const y = window.scrollY;
           const scrolled = header.classList.contains('is-scrolled');
-          // 使用 40px 滞后区间，避免在阈值附近反复切换
           if (!scrolled && y > 80) {
             header.classList.add('is-scrolled');
           } else if (scrolled && y < 40) {
             header.classList.remove('is-scrolled');
           }
         }
+        function updateScrollStrip() {
+          const strip = document.querySelector('.scroll-strip');
+          if (!strip) return;
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          const p = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+          strip.style.setProperty('--scroll-progress', String(p));
+        }
         updateHeader();
-        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateScrollStrip();
+        window.addEventListener('scroll', () => {
+          updateHeader();
+          updateScrollStrip();
+        }, { passive: true });
       })();
     </script>
   </body>

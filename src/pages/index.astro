@@ -8,9 +8,13 @@ import { getHomeEntry, getLatest } from "../lib/site";
 
 const home = getHomeEntry();
 const latestProducts = getLatest("product", 8);
+
+// Split hero title into words for letter-stagger animation
+const heroWords = homeContent.hero.title.split(" ");
 ---
 
 <MainLayout title="Home - Wuxi Sharing Machinery Co.,Ltd" description={home.description} image={home.image}>
+  {/* ─── Hero ─────────────────────────────────────────── */}
   <section class="section-lg relative overflow-hidden bg-[#0b1d33] text-white" data-reveal="fade">
     {homeContent.hero.image ? (
       <img
@@ -21,71 +25,98 @@ const latestProducts = getLatest("product", 8);
       />
     ) : null}
     <div class="absolute inset-0 bg-gradient-to-br from-[#0b1d33]/90 via-[#0f2440]/80 to-[#0b1d33]/95"></div>
-    <div class="pixel-container relative z-10 text-center">
-      <h1 class="mx-auto max-w-[1100px] text-[34px] font-bold leading-[1.15] text-white md:text-[40px] lg:text-[44px]">
-        {homeContent.hero.title}
+    <div class="pixel-container relative z-10">
+      <div class="eyebrow-mono text-white/55 mb-[20px]">// Laundry Equipment · Since 2009</div>
+      <h1 class="hero-stagger max-w-[1100px] text-[34px] font-semibold leading-[1.15] tracking-[-0.01em] md:text-[42px] lg:text-[48px]">
+        {heroWords.map((word, i) => (
+          <span style={`--i:${i}`}>{word}&nbsp;</span>
+        ))}
       </h1>
-      <div class="mx-auto mt-[16px] h-[3px] w-[58px] bg-[var(--site-green)]"></div>
-      <ul class="mx-auto mt-[24px] max-w-[760px] list-disc text-left text-[15px] leading-[1.65] text-white/85">
+      <div class="mt-[20px] h-[2px] w-[48px] bg-[var(--site-green)]"></div>
+      <ul class="mt-[28px] max-w-[760px] list-disc text-left text-[15px] leading-[1.7] text-white/80">
         {homeContent.hero.bullets.map((item) => <li>{item}</li>)}
       </ul>
-      <div class="mt-[34px] flex flex-wrap items-center justify-center gap-[16px]">
+      <div class="mt-[36px] flex flex-wrap items-center gap-[16px]">
         <a href={homeContent.hero.primaryHref} class="btn-primary">
-          {homeContent.hero.primaryLabel} <span class="text-[13px]">&gt;</span>
+          {homeContent.hero.primaryLabel} <span class="text-[13px]">&rarr;</span>
+        </a>
+        <a href={homeContent.hero.secondaryHref} class="btn-secondary">
+          {homeContent.hero.secondaryLabel}
         </a>
       </div>
 
-      <div class="mx-auto mt-[42px] grid max-w-[940px] grid-cols-2 gap-x-[30px] gap-y-[30px] sm:grid-cols-4">
-        {homeContent.showcaseItems.map((item) => (
-          <a href={item.href} class="group text-center">
-            <div class="relative mx-auto h-[180px] w-[180px] overflow-hidden rounded-full bg-[#d8d8d8] shadow-[0_2px_4px_rgba(0,0,0,0.16)]">
-              <img
-                src={item.image}
-                alt={item.title}
-                class="h-full w-full object-cover grayscale transition duration-300 group-hover:grayscale-0"
-              />
-              <div class="absolute inset-x-0 bottom-0 h-[52px] rounded-t-[80%] bg-[var(--site-blue)]"></div>
-              <div class="showcase-label absolute inset-x-2 bottom-[18px] truncate text-[13px] font-bold text-white">
-                {item.title}
+      <div class="mt-[60px]">
+        <div class="mono-label text-white/45 mb-[24px]">— Equipment Range</div>
+        <div class="grid max-w-[940px] grid-cols-2 gap-x-[30px] gap-y-[28px] sm:grid-cols-4">
+          {homeContent.showcaseItems.map((item) => (
+            <a href={item.href} class="showcase-card group">
+              <div class="showcase-disc relative mx-auto h-[180px] w-[180px] overflow-hidden rounded-full bg-[#1a2d44] shadow-[0_4px_16px_rgba(0,0,0,0.3)]">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  class="showcase-img h-full w-full object-cover opacity-85"
+                  loading="lazy"
+                />
+                <div class="absolute inset-x-0 bottom-0 h-[48px] bg-[var(--site-blue)]"></div>
+                <div class="showcase-label absolute inset-x-2 bottom-[14px] truncate text-center text-[12px] font-medium text-white" style="font-family: var(--site-mono); letter-spacing: 0.04em;">
+                  {item.title}
+                </div>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section-sm pixel-container relative z-10 -mt-[56px] grid bg-white px-[35px] shadow-[0_26px_58px_rgba(0,0,0,0.18)] md:grid-cols-3" data-reveal="fade-up" data-reveal-delay="100">
+  {/* ─── Highlights ───────────────────────────────────── */}
+  <section class="section-sm pixel-container relative z-10 -mt-[56px] grid bg-white px-[35px] py-[48px] shadow-[0_26px_58px_rgba(0,0,0,0.12)] md:grid-cols-3" data-reveal="fade-up" data-reveal-delay="100">
     {homeContent.highlights.map((item, index) => (
-      <article class={`px-[34px] text-center ${index === 1 ? "md:border-x md:border-[#eeeeee]" : ""}`}>
-        <h2 class="text-[25px] font-bold uppercase text-[var(--site-heading)]">{item.title}</h2>
-        <p class="mt-[18px] text-left text-[14px] leading-[1.6] text-[#777]">{item.body}</p>
+      <article class={`px-[34px] ${index === 1 ? "md:border-x md:border-[#e2e5eb]" : ""}`}>
+        <div class="mono-label text-[var(--site-heading-accent)] mb-[14px]">0{index + 1} ·</div>
+        <h2 class="text-[24px] font-semibold uppercase tracking-[0.02em] text-[var(--site-heading)]" style="font-family: var(--site-mono);">{item.title}</h2>
+        <p class="mt-[16px] text-[14px] leading-[1.7] text-[var(--site-text-soft)]">{item.body}</p>
       </article>
     ))}
   </section>
 
-  <section class="section-lg pixel-container grid gap-[70px] md:grid-cols-[1fr_1.08fr] md:items-start" data-reveal="fade-up">
+  {/* ─── What We Do ──────────────────────────────────── */}
+  <section class="section-lg pixel-container grid gap-[80px] md:grid-cols-[1fr_1.08fr] md:items-start" data-reveal="fade-up">
     <div>
+      <div class="section-marker mb-[18px]">§ 01 · About</div>
       <h2 class="site-section-title">What We Do</h2>
-      <p class="mt-[32px] text-[15px] leading-[1.7] text-[#666]">{homeContent.intro.body}</p>
+      <p class="mt-[28px] text-[15px] leading-[1.75] text-[var(--site-text)]">{homeContent.intro.body}</p>
+      <div class="mt-[36px] flex items-center gap-[24px]">
+        <div>
+          <div class="mono-label text-[var(--site-text-soft)]">Established</div>
+          <div class="phone-mono mt-[4px] text-[18px] font-semibold text-[var(--site-heading)]">2009</div>
+        </div>
+        <div class="h-[36px] w-px bg-[var(--site-line)]"></div>
+        <div>
+          <div class="mono-label text-[var(--site-text-soft)]">Location</div>
+          <div class="mt-[4px] text-[14px] font-medium text-[var(--site-heading)]">Wuxi · China</div>
+        </div>
+      </div>
     </div>
-    <div class="overflow-hidden rounded-[4px] shadow-[0_9px_18px_rgba(0,0,0,0.24)]">
+    <div class="overflow-hidden rounded-[2px] shadow-[0_16px_40px_rgba(11,29,51,0.18)]">
       <img src={homeContent.intro.image} alt="Sharing laundry exhibition" class="aspect-[1.55] w-full object-cover" />
     </div>
   </section>
 
+  {/* ─── Why Choose Us ────────────────────────────────── */}
   <section class="section-md relative overflow-hidden bg-cover bg-center bg-no-repeat text-white" style="background-image: url('/wp-assets/uploads/img-bg-laundry.jpg');" data-reveal="fade-up">
-    <div class="absolute inset-0 bg-[#0b1d33]/80"></div>
-    <div class="pixel-container relative z-10 grid gap-[76px] md:grid-cols-[1fr_1fr]">
+    <div class="absolute inset-0 bg-[#0b1d33]/85"></div>
+    <div class="pixel-container relative z-10 grid gap-[80px] md:grid-cols-[1fr_1fr]">
       <div>
-        <h2 class="site-section-title">Why Choose Us</h2>
-        <div class="mt-[42px] grid gap-x-[30px] gap-y-[34px] sm:grid-cols-2">
+        <div class="section-marker mb-[18px] text-white/60">§ 02 · Why Us</div>
+        <h2 class="site-section-title text-white" style="color: #fff;">Why Choose Us</h2>
+        <div class="mt-[44px] grid gap-x-[30px] gap-y-[34px] sm:grid-cols-2">
           {homeContent.reasons.map((reason, index) => (
-            <article class="grid grid-cols-[44px_1fr] gap-[15px]">
-              <div class="blue-icon-dot">{index + 1}</div>
+            <article class="reason-row">
+              <div class="reason-num text-white/65">0{index + 1}</div>
               <div>
-                <h3 class="text-[15px] font-bold text-[var(--site-blue-dark)]">{reason.title}</h3>
-                <p class="mt-[8px] text-[14px] leading-[1.6] text-white/90">
+                <h3 class="text-[15px] font-semibold text-white" style="font-family: var(--site-sans); letter-spacing: 0.01em;">{reason.title}</h3>
+                <p class="mt-[8px] text-[13px] leading-[1.7] text-white/75">
                   {reason.body}
                 </p>
               </div>
@@ -97,16 +128,18 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
+  {/* ─── Partners ────────────────────────────────────── */}
   <section class="section-lg" data-reveal="fade-up">
-    <div class="pixel-container text-center">
-      <h2 class="site-section-title mx-auto w-fit text-center">Cooperative Partners</h2>
-      <p class="mt-[34px] text-[13px] font-bold tracking-[0.24em] text-[var(--site-blue)]">
+    <div class="pixel-container">
+      <div class="section-marker mb-[18px]">§ 03 · Partners</div>
+      <h2 class="site-section-title">Cooperative Partners</h2>
+      <p class="mt-[32px] max-w-[720px] text-[13px] font-medium tracking-[0.18em] text-[var(--site-text-soft)]" style="font-family: var(--site-mono); text-transform: uppercase;">
         {homeContent.partnersTitle}
       </p>
-      <div class="mt-[34px]">
+      <div class="mt-[40px]">
         <Carousel id="partners" autoplay={3500} itemsPerView={5} itemsPerViewTablet={3} itemsPerViewMobile={2} gap={10}>
           {homeContent.partnerLogos.map((logo, index) => (
-            <div class="flex h-[126px] items-center justify-center rounded-[4px] border border-[#cfcfcf] bg-white p-[10px]">
+            <div class="flex h-[120px] items-center justify-center border border-[#e2e5eb] bg-white p-[10px]">
               <img src={logo} alt={`Cooperative partner ${index + 1}`} class="max-h-full max-w-full object-contain" loading="lazy" />
             </div>
           ))}
@@ -115,20 +148,22 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
-  <section class="section-md bg-[#f2f2f2]" data-reveal="fade-up">
+  {/* ─── Testimonials ────────────────────────────────── */}
+  <section class="section-md bg-[var(--site-soft)]" data-reveal="fade-up">
     <div class="pixel-container">
+      <div class="section-marker mb-[18px]">§ 04 · Testimonials</div>
       <h2 class="site-section-title">Our Customer Say</h2>
       <div class="mt-[50px]">
         <Carousel id="testimonials" autoplay={5000} itemsPerView={2} itemsPerViewMobile={1} gap={32}>
           {homeContent.testimonials.map((item) => (
-            <article class="border-b-[5px] border-[var(--site-green)] pb-[27px]">
-              <div class="mb-[13px] text-[34px] font-black leading-none text-[var(--site-blue)]">"</div>
-              <p class="text-[15px] leading-[1.7] text-[#666]">{item.quote}</p>
+            <article class="border-b-[2px] border-[var(--site-green)] pb-[27px]">
+              <div class="testimonial-quote">Customer Review</div>
+              <p class="text-[15px] leading-[1.75] text-[var(--site-text)]">{item.quote}</p>
               <div class="mt-[21px] flex items-center gap-[12px]">
-                <img src={item.image} alt={item.author} class="h-[48px] w-[48px] rounded-full object-cover" loading="lazy" />
+                <img src={item.image} alt={item.author} class="h-[44px] w-[44px] rounded-full object-cover" loading="lazy" />
                 <div>
-                  <div class="text-[14px] font-bold text-[var(--site-blue)]">{item.author}</div>
-                  <div class="text-[13px] text-[#777]">{item.role}</div>
+                  <div class="text-[14px] font-semibold text-[var(--site-heading)]">{item.author}</div>
+                  <div class="text-[12px] text-[var(--site-text-soft)] mt-[2px]" style="font-family: var(--site-mono); letter-spacing: 0.04em;">{item.role}</div>
                 </div>
               </div>
             </article>
@@ -138,18 +173,22 @@ const latestProducts = getLatest("product", 8);
     </div>
   </section>
 
+  {/* ─── Hotline CTA ─────────────────────────────────── */}
   <section class="section-md slanted-bg bg-white text-center" data-reveal="fade-up">
     <div class="pixel-container">
-      <div class="text-[13px] font-bold uppercase tracking-[0.22em] text-[var(--site-blue)]">{homeContent.hotline.eyebrow}</div>
-      <div class="mt-[16px] text-[28px] font-bold text-[var(--site-blue)]">{homeContent.hotline.phone}</div>
-      <div class="mx-auto mt-[16px] h-[3px] w-[58px] bg-[var(--site-green)]"></div>
-      <div class="mt-[24px] text-[14px] font-bold tracking-[0.22em] text-[var(--site-blue)]">{homeContent.hotline.title}</div>
-      <a href={homeContent.hotline.href} class="btn-primary mt-[25px]">{homeContent.hotline.label} <span>&gt;</span></a>
+      <div class="section-marker mb-[18px] justify-center" style="justify-content: center;">§ 05 · Hotline</div>
+      <div class="eyebrow-mono text-[var(--site-heading-accent)]">{homeContent.hotline.eyebrow}</div>
+      <div class="phone-mono mt-[18px] text-[30px] font-semibold text-[var(--site-heading)]">{homeContent.hotline.phone}</div>
+      <div class="mx-auto mt-[18px] h-[2px] w-[48px] bg-[var(--site-green)]"></div>
+      <div class="mt-[24px] text-[14px] font-semibold tracking-[0.22em] text-[var(--site-heading-accent)]" style="font-family: var(--site-mono);">{homeContent.hotline.title}</div>
+      <a href={homeContent.hotline.href} class="btn-primary mt-[28px]">{homeContent.hotline.label} <span>&rarr;</span></a>
     </div>
   </section>
 
-  <section class="section-md bg-[#f4f8fc]" data-reveal="fade-up">
+  {/* ─── Products ────────────────────────────────────── */}
+  <section class="section-md bg-[var(--site-soft)]" data-reveal="fade-up">
     <div class="pixel-container">
+      <div class="section-marker mb-[18px]">§ 06 · Products</div>
       <EntryGrid title="Products" entries={latestProducts.slice(0, 6)} />
     </div>
   </section>
