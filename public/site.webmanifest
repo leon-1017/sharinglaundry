@@ -1,0 +1,14 @@
+{
+  "name": "Sharing Laundry Systems",
+  "short_name": "Sharing Laundry",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#1684ff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
