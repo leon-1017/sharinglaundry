@@ -77,19 +77,14 @@ const iconSvg: Record<string, string> = {
 
 <main>
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-[#f3f3f3] py-[90px] md:py-[110px]" data-reveal="fade">
-    <div class="pixel-container grid items-center gap-[40px] md:grid-cols-[1fr_1.1fr]">
-      <div>
-        <h1 class="text-[36px] font-normal leading-tight text-[var(--site-blue)] md:text-[44px]">ABOUT US</h1>
-        <h2 class="mt-[14px] max-w-[480px] text-[22px] font-bold leading-snug text-[var(--site-blue-dark)] md:text-[26px]">
-          Focus on Industrial and Commercial Laundry Equipment over 15 years
-        </h2>
-      </div>
-      <div class="relative">
-        <div class="aspect-[1.4/1] w-full overflow-hidden bg-[#e8eaed]">
-          <img src="/wp-assets/uploads/SWE25S.png" alt="Industrial laundry equipment" class="h-full w-full object-contain" />
-        </div>
-      </div>
+  <section class="relative overflow-hidden bg-cover bg-center bg-no-repeat py-[90px] text-white" style="background-image: url('/wp-assets/uploads/img-bg-laundry.jpg');" data-reveal="fade">
+    <div class="absolute inset-0 bg-[#0b1d33]/75"></div>
+    <div class="pixel-container relative z-10">
+      <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
+      <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+      <p class="mt-[20px] max-w-[640px] text-[18px] font-bold leading-[1.5] text-white">
+        Focus on Industrial and Commercial Laundry Equipment over 15 years
+      </p>
     </div>
   </section>
 
