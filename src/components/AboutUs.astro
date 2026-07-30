@@ -78,10 +78,10 @@ const iconSvg: Record<string, string> = {
 <main>
   <!-- Hero -->
   <section class="relative overflow-hidden bg-cover bg-center bg-no-repeat py-[90px] text-white" style="background-image: url('/wp-assets/uploads/img-bg-laundry.jpg');" data-reveal="fade">
-    <div class="absolute inset-0 bg-[#0b1d33]/75"></div>
+    <div class="absolute inset-0 bg-bg-hero-overlay"></div>
     <div class="pixel-container relative z-10">
       <h1 class="text-[40px] font-normal leading-tight md:text-[48px]">{entry.title}</h1>
-      <div class="mt-[18px] h-[2px] w-[64px] bg-[var(--site-blue)]"></div>
+      <div class="mt-[18px] h-[2px] w-[64px] bg-brand-primary"></div>
       <p class="mt-[20px] max-w-[640px] text-[18px] font-bold leading-[1.5] text-white">
         Focus on Industrial and Commercial Laundry Equipment over 15 years
       </p>
@@ -97,8 +97,8 @@ const iconSvg: Record<string, string> = {
 
       <div class="mt-[60px] grid gap-[50px] md:grid-cols-[1fr_1.1fr]">
         <div>
-          <h3 class="text-[20px] font-bold text-[var(--site-blue-dark)]">Brief Introduction</h3>
-          <div class="mt-[20px] space-y-[16px] text-[15px] leading-[1.7] text-[#777]">
+          <h3 class="text-[20px] font-bold text-brand-primary-hover">Brief Introduction</h3>
+          <div class="mt-[20px] space-y-[16px] text-[15px] leading-[1.7] text-neutral-600">
             <p>Wuxi Sharing Machinery Co., Ltd located in East China, 100km away from Shanghai, specializes in manufacturing and selling China's best quality commercial and industrial laundry equipment, including washer extractors, tumble dryers, flatwork ironers, folders, dry cleaning machines, laundry press machine, and finishing equipment, etc.</p>
             <p>We are acknowledged as a leading supplier in the field of industrial and commercial laundry equipment in China now. In the past 15 years, We have established long-term and mutually beneficial relationships with our customers at home and abroad.</p>
             <p>Sharing's laundry equipment is popular with customers at home and abroad, we always commit to continuing innovation &amp; improvement, providing high-quality machines, professional &amp; sincere service and competitive prices.</p>
@@ -106,7 +106,7 @@ const iconSvg: Record<string, string> = {
         </div>
         <div class="grid grid-cols-2 gap-[14px]">
           {galleryImages.map((src, idx) => (
-            <div class="aspect-[1.35/1] overflow-hidden bg-[#f1f1f1]">
+            <div class="aspect-[1.35/1] overflow-hidden bg-neutral-160">
               <img
                 src={src}
                 alt={`Company profile ${idx + 1}`}
@@ -130,10 +130,10 @@ const iconSvg: Record<string, string> = {
       <div class="mx-auto mt-[70px] grid max-w-[860px] grid-cols-1 gap-x-[60px] gap-y-[42px] sm:grid-cols-2 md:grid-cols-3">
         {whyChooseItems.map((item) => (
           <div class="flex flex-col items-center text-center">
-            <div class="flex h-[80px] w-[80px] items-center justify-center rounded-full border border-[#d8d8d8] text-[var(--site-blue)]">
+            <div class="flex h-[80px] w-[80px] items-center justify-center rounded-full border border-neutral-350 text-brand-primary">
               <svg class="h-[36px] w-[36px]" viewBox="0 0 24 24" aria-hidden="true" set:html={iconSvg[item.icon]} />
             </div>
-            <h3 class="mt-[18px] text-[16px] font-semibold text-[#333]">{item.title}</h3>
+            <h3 class="mt-[18px] text-[16px] font-semibold text-neutral-950">{item.title}</h3>
           </div>
         ))}
       </div>
@@ -141,7 +141,7 @@ const iconSvg: Record<string, string> = {
   </section>
 
   <!-- Company Culture -->
-  <section class="section-lg bg-[#fafafa]" data-reveal="fade-up">
+  <section class="section-lg bg-neutral-110" data-reveal="fade-up">
     <div class="pixel-container">
       <div class="text-center">
         <h2 class="site-section-title mx-auto inline-block">Company Culture</h2>
@@ -150,8 +150,8 @@ const iconSvg: Record<string, string> = {
       <div class="mx-auto mt-[60px] max-w-[860px] space-y-[34px]">
         {cultureItems.map((item) => (
           <div>
-            <h3 class="text-[18px] font-bold text-[var(--site-blue)]">{item.title}</h3>
-            <p class="mt-[12px] text-[15px] leading-[1.75] text-[#777]">{item.body}</p>
+            <h3 class="text-[18px] font-bold text-brand-primary">{item.title}</h3>
+            <p class="mt-[12px] text-[15px] leading-[1.75] text-neutral-600">{item.body}</p>
           </div>
         ))}
       </div>
@@ -176,13 +176,13 @@ const iconSvg: Record<string, string> = {
   </section>
 
   <!-- Hotline CTA -->
-  <section class="relative overflow-hidden bg-[#eaeaea] py-[80px] text-center" data-reveal="fade-up">
-    <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-[#d9dde2] md:block" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"></div>
+  <section class="relative overflow-hidden bg-neutral-220 py-[80px] text-center" data-reveal="fade-up">
+    <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-neutral-310 md:block" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);"></div>
     <div class="pixel-container relative">
-      <p class="text-[14px] font-semibold tracking-[0.18em] text-[var(--site-blue)]">HOTLINE 24/7</p>
-      <h2 class="mt-[14px] text-[28px] font-bold text-[var(--site-blue)] md:text-[32px]">+86-13606196136, 13861751289</h2>
-      <div class="mx-auto mt-[24px] h-[2px] w-[60px] bg-[var(--site-green)]"></div>
-      <p class="mt-[34px] text-[15px] font-semibold tracking-[0.12em] text-[var(--site-blue)]">Start Your Laundry Business Today</p>
+      <p class="text-[14px] font-semibold tracking-[0.18em] text-brand-primary">HOTLINE 24/7</p>
+      <h2 class="mt-[14px] text-[28px] font-bold text-brand-primary md:text-[32px]">+86-13606196136, 13861751289</h2>
+      <div class="mx-auto mt-[24px] h-[2px] w-[60px] bg-brand-secondary"></div>
+      <p class="mt-[34px] text-[15px] font-semibold tracking-[0.12em] text-brand-primary">Start Your Laundry Business Today</p>
       <div class="mt-[24px]">
         <a href="/contact-us/" class="btn-primary">Contact Our Team</a>
       </div>

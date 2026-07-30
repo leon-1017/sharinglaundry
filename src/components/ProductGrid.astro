@@ -15,7 +15,7 @@ const { title, eyebrow, products, emptyMessage } = Astro.props as {
   {title || eyebrow ? (
     <div>
       {eyebrow ? (
-        <div class="mb-1 text-[13px] font-bold uppercase tracking-[0.26em] text-[var(--site-blue)]">{eyebrow}</div>
+        <div class="mb-1 text-xs font-bold uppercase tracking-[0.26em] text-brand-primary">{eyebrow}</div>
       ) : null}
       {title ? <h2 class="site-section-title">{title}</h2> : null}
     </div>
@@ -25,7 +25,7 @@ const { title, eyebrow, products, emptyMessage } = Astro.props as {
       <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <a href={product.href} class="card-link group overflow-hidden">
-            <div class="aspect-square overflow-hidden bg-[#f3f5f8]">
+            <div class="aspect-square overflow-hidden bg-neutral-140">
               {product.image ? (
                 <img
                   src={product.image}
@@ -36,14 +36,14 @@ const { title, eyebrow, products, emptyMessage } = Astro.props as {
               ) : null}
             </div>
             <div class="p-[18px] text-center">
-              <h3 class="text-[15px] font-bold text-[var(--site-blue-dark)]">{product.title}</h3>
-              <span class="mt-[8px] inline-flex text-[13px] font-bold text-[var(--site-blue)]">View details</span>
+              <h3 class="text-[15px] font-bold text-brand-primary-hover">{product.title}</h3>
+              <span class="mt-[8px] inline-flex text-xs font-bold text-brand-primary">View details</span>
             </div>
           </a>
         ))}
       </div>
     ) : (
-      <p class="rounded border border-dashed border-[var(--site-line)] px-4 py-8 text-center text-sm text-slate-500">
+      <p class="rounded border border-dashed border-border-default px-4 py-8 text-center text-sm text-neutral-600">
         {emptyMessage || "No products available."}
       </p>
     )

@@ -1,0 +1,172 @@
+{
+  "color": {
+    "raw": {
+      "blue": {
+        "50": { "$value": "#eff8ff", "$type": "color", "$description": "Blue tint - lightest background" },
+        "100": { "$value": "#dbeefe", "$type": "color", "$description": "Blue tint - soft background" },
+        "500": { "$value": "#1684ff", "$type": "color", "$description": "Brand primary blue" },
+        "600": { "$value": "#1676ed", "$type": "color", "$description": "Brand primary blue dark" },
+        "700": { "$value": "#0b4a8f", "$type": "color", "$description": "Deep blue for shadows" }
+      },
+      "green": {
+        "500": { "$value": "#61ce70", "$type": "color", "$description": "Brand green - CTA" },
+        "600": { "$value": "#52bf60", "$type": "color", "$description": "Brand green hover" }
+      },
+      "neutral": {
+        "white": { "$value": "#ffffff", "$type": "color" },
+        "50": { "$value": "#f8faff", "$type": "color" },
+        "100": { "$value": "#f4f6f8", "$type": "color" },
+        "200": { "$value": "#eef2f9", "$type": "color" },
+        "300": { "$value": "#e4e4e4", "$type": "color" },
+        "400": { "$value": "#d6d6d6", "$type": "color" },
+        "500": { "$value": "#a9a9a9", "$type": "color" },
+        "600": { "$value": "#777777", "$type": "color" },
+        "700": { "$value": "#737373", "$type": "color" },
+        "800": { "$value": "#6f7480", "$type": "color" },
+        "900": { "$value": "#686868", "$type": "color" },
+        "950": { "$value": "#0b1d33", "$type": "color", "$description": "Navy dark for hero overlays" }
+      },
+      "whatsapp": { "$value": "#00A884", "$type": "color" },
+      "cyan": { "$value": "#14a4d8", "$type": "color" }
+    },
+    "brand": {
+      "primary": { "$value": "{color.raw.blue.500}", "$type": "color", "$description": "Primary brand blue - links, headings, accents" },
+      "primary-hover": { "$value": "{color.raw.blue.600}", "$type": "color" },
+      "secondary": { "$value": "{color.raw.green.500}", "$type": "color", "$description": "CTA green - buttons, accents" },
+      "secondary-hover": { "$value": "{color.raw.green.600}", "$type": "color" }
+    },
+    "text": {
+      "body": { "$value": "{color.raw.neutral.800}", "$type": "color", "$description": "Default body text" },
+      "prose": { "$value": "{color.raw.neutral.900}", "$type": "color", "$description": "Rich content text" },
+      "muted": { "$value": "{color.raw.neutral.600}", "$type": "color", "$description": "Secondary/description text" },
+      "footer": { "$value": "{color.raw.neutral.700}", "$type": "color" },
+      "heading": { "$value": "{color.brand.primary}", "$type": "color" },
+      "white": { "$value": "{color.raw.neutral.white}", "$type": "color" },
+      "white-muted": { "$value": "rgba(255,255,255,0.8)", "$type": "color" }
+    },
+    "bg": {
+      "page": { "$value": "{color.raw.neutral.white}", "$type": "color" },
+      "soft": { "$value": "{color.raw.neutral.100}", "$type": "color", "$description": "Soft gray backgrounds" },
+      "slanted-start": { "$value": "{color.raw.neutral.200}", "$type": "color" },
+      "slanted-end": { "$value": "{color.raw.neutral.50}", "$type": "color" },
+      "hero-overlay": { "$value": "rgba(11,29,51,0.75)", "$type": "color", "$description": "Semi-transparent navy for hero overlays" },
+      "card": { "$value": "{color.raw.neutral.white}", "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.raw.neutral.400}", "$type": "color" },
+      "card": { "$value": "{color.raw.neutral.300}", "$type": "color" },
+      "card-hover": { "$value": "rgba(20,164,216,0.45)", "$type": "color" }
+    },
+    "element": {
+      "gray-band": { "$value": "{color.raw.neutral.500}", "$type": "color" },
+      "whatsapp": { "$value": "{color.raw.whatsapp}", "$type": "color" }
+    }
+  },
+  "spacing": {
+    "0": { "$value": "0px", "$type": "dimension" },
+    "1": { "$value": "4px", "$type": "dimension" },
+    "2": { "$value": "8px", "$type": "dimension" },
+    "3": { "$value": "12px", "$type": "dimension" },
+    "4": { "$value": "16px", "$type": "dimension" },
+    "5": { "$value": "20px", "$type": "dimension" },
+    "6": { "$value": "24px", "$type": "dimension" },
+    "8": { "$value": "32px", "$type": "dimension" },
+    "10": { "$value": "40px", "$type": "dimension" },
+    "12": { "$value": "48px", "$type": "dimension" },
+    "14": { "$value": "56px", "$type": "dimension" },
+    "18": { "$value": "72px", "$type": "dimension" },
+    "24": { "$value": "96px", "$type": "dimension" },
+    "container-gutter-mobile": { "$value": "14px", "$type": "dimension" },
+    "container-gutter-desktop": { "$value": "20px", "$type": "dimension" },
+    "container-max-shell": { "$value": "1240px", "$type": "dimension" },
+    "container-max-pixel": { "$value": "1160px", "$type": "dimension" }
+  },
+  "radius": {
+    "sm": { "$value": "2px", "$type": "dimension" },
+    "md": { "$value": "3px", "$type": "dimension" },
+    "lg": { "$value": "6px", "$type": "dimension" },
+    "pill": { "$value": "999px", "$type": "dimension" }
+  },
+  "shadow": {
+    "card": {
+      "$value": {
+        "x": "0",
+        "y": "14px",
+        "blur": "35px",
+        "spread": "0",
+        "color": "rgba(7,53,107,0.12)"
+      },
+      "$type": "shadow",
+      "$description": "Card hover shadow"
+    },
+    "button": {
+      "$value": {
+        "x": "0",
+        "y": "10px",
+        "blur": "24px",
+        "spread": "0",
+        "color": "rgba(11,74,143,0.16)"
+      },
+      "$type": "shadow",
+      "$description": "Primary button hover shadow"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": { "$value": ["Arial", "Helvetica", "sans-serif"], "$type": "fontFamily", "$description": "System sans-serif stack" }
+    },
+    "fontSize": {
+      "xs": { "$value": "13px", "$type": "dimension" },
+      "sm": { "$value": "14px", "$type": "dimension" },
+      "base": { "$value": "15px", "$type": "dimension" },
+      "lg": { "$value": "18px", "$type": "dimension" },
+      "xl": { "$value": "24px", "$type": "dimension" },
+      "2xl": { "$value": "26px", "$type": "dimension" },
+      "3xl": { "$value": "30px", "$type": "dimension" },
+      "4xl": { "$value": "32px", "$type": "dimension" }
+    },
+    "fontWeight": {
+      "normal": { "$value": "400", "$type": "fontWeight" },
+      "bold": { "$value": "700", "$type": "fontWeight" }
+    },
+    "lineHeight": {
+      "tight": { "$value": "1.15", "$type": "number" },
+      "snug": { "$value": "1.2", "$type": "number" },
+      "normal": { "$value": "1.3", "$type": "number" },
+      "relaxed": { "$value": "1.55", "$type": "number" },
+      "prose": { "$value": "1.7", "$type": "number" }
+    }
+  },
+  "motion": {
+    "duration": {
+      "fast": { "$value": "160ms", "$type": "duration" },
+      "base": { "$value": "0.6s", "$type": "duration" }
+    },
+    "easing": {
+      "ease": { "$value": "ease", "$type": "cubicBezier" },
+      "ease-out": { "$value": "ease-out", "$type": "cubicBezier" }
+    }
+  },
+  "layout": {
+    "section": {
+      "padding-sm": { "$value": "{spacing.14}", "$type": "dimension" },
+      "padding-md": { "$value": "{spacing.18}", "$type": "dimension" },
+      "padding-lg": { "$value": "{spacing.24}", "$type": "dimension" }
+    },
+    "divider": {
+      "width": { "$value": "58px", "$type": "dimension" },
+      "height": { "$value": "3px", "$type": "dimension" },
+      "margin-top": { "$value": "18px", "$type": "dimension" }
+    },
+    "icon": {
+      "dot-size": { "$value": "44px", "$type": "dimension" }
+    },
+    "button": {
+      "min-height": { "$value": "42px", "$type": "dimension" },
+      "padding-x-primary": { "$value": "28px", "$type": "dimension" },
+      "padding-x-secondary": { "$value": "24px", "$type": "dimension" },
+      "padding-y": { "$value": "12px", "$type": "dimension" },
+      "gap": { "$value": "8px", "$type": "dimension" }
+    }
+  }
+}
