@@ -36,12 +36,12 @@ const latestProducts = getLatest("product", 8);
 
       <div class="mx-auto mt-[42px] grid max-w-[940px] grid-cols-2 gap-x-[30px] gap-y-[30px] sm:grid-cols-4">
         {homeContent.showcaseItems.map((item) => (
-          <a href={item.href} class="group text-center">
+          <a href={item.href} class="text-center">
             <div class="relative mx-auto h-[180px] w-[180px] overflow-hidden rounded-full bg-neutral-350 shadow-[0_2px_4px_rgba(0,0,0,0.16)]">
               <img
                 src={item.image}
                 alt={item.title}
-                class="h-full w-full object-cover grayscale transition duration-300 group-hover:grayscale-0"
+                class="h-full w-full object-cover grayscale"
               />
               <div class="absolute inset-x-0 bottom-0 h-[52px] rounded-t-[80%] bg-brand-primary"></div>
               <div class="showcase-label absolute inset-x-2 bottom-[18px] truncate text-xs font-bold text-white">
